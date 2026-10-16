@@ -1,0 +1,25 @@
+{
+  "run_id": "smoke_demo",
+  "backend": "mock",
+  "model_name": "mock-model",
+  "split": "val",
+  "seed_range": "val",
+  "k": 4,
+  "n_samples": 4,
+  "temperature": 0.7,
+  "n_graphs": 2,
+  "seed": 42,
+  "eps": 0.05,
+  "prompt_version": "v1",
+  "force_unlock_used": false,
+  "config_hash": "31b8d6a917a7",
+  "git_commit": "unknown",
+  "timestamp": "2026-10-16T04:14:53.850287+00:00",
+  "library_versions": {
+    "numpy": "2.5.3",
+    "numba": "0.68.0",
+    "scipy": "1.18.1",
+    "networkx": "3.7",
+    "pandas": "3.0.6"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "card": "queen-grid-like, nodes 200-300, density 0.16, low degree variance, moderate clustering",
+  "p_idx": 2,
+  "paraphrase": "Distribution of queen network instances having nodes 200-300 and density 0.16. The topology exhibits low degree variance alongside moderate clustering."
+}

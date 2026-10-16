@@ -1,0 +1,153 @@
+DATASET v1 (full): candidates=117 kept=106 dropped=11 graphs=18020
+
+Pools: heldout_combo=10, heldout_size=15, heldout_type=26, train_pool=55
+
+Families per structure type and pool:
+  caveman            heldout_size=2, train_pool=7
+  equipartite        heldout_combo=2, heldout_size=2, train_pool=7
+  geometric          heldout_type=7
+  gnp                heldout_combo=3, heldout_size=3, train_pool=12
+  hybrid_geometric   heldout_type=5
+  interval           heldout_size=1, train_pool=6
+  mycielski          heldout_size=2, train_pool=8
+  planted_partition  heldout_combo=5, heldout_size=3, train_pool=8
+  queen              heldout_type=7
+  scale_free         heldout_type=7
+  small_world        heldout_size=2, train_pool=7
+
+Dropped (no headroom, DSATUR provably near-optimal):
+  geo_r0.10_n200-300                 DSATUR mean 8.60 within 0.25 of clique lower bound 8.40: provably (near-)optimal
+  ba_m3_n100-300                     DSATUR mean 4.00 within 0.25 of clique lower bound 3.80: provably (near-)optimal
+  cave_k10_p0.1_n100-200             DSATUR mean 8.90 within 0.25 of clique lower bound 8.80: provably (near-)optimal
+  kpart_k5_p0.5_n100-200             DSATUR mean 5.00 within 0.25 of clique lower bound 5.00: provably (near-)optimal
+  cave_k5_p0.05_n100-200             DSATUR mean 5.00 within 0.25 of clique lower bound 5.00: provably (near-)optimal
+  kpart_k4_p0.5_n100-200             DSATUR mean 4.00 within 0.25 of clique lower bound 4.00: provably (near-)optimal
+  hyb_r0.10_q0.01_n100-200           DSATUR mean 6.60 within 0.25 of clique lower bound 6.50: provably (near-)optimal
+  ba_m2_n100-200                     DSATUR mean 3.00 within 0.25 of clique lower bound 3.00: provably (near-)optimal
+  ba_m3_n200-300                     DSATUR mean 4.00 within 0.25 of clique lower bound 3.80: provably (near-)optimal
+  plc_m5_p0.9_n100-200               DSATUR mean 6.10 within 0.25 of clique lower bound 5.90: provably (near-)optimal
+  queen_keep0.4_n100-200             DSATUR mean 12.50 within 0.25 of clique lower bound 12.40: provably (near-)optimal
+
+Headroom proxy (mean DSATUR - best of cheap portfolio, colors) over kept families: min=0.00 median=0.40 max=11.60; families with proxy < 0.2: 36
+
+Card uniqueness: full card 104/106 unique; no-structure card 98/106 unique
+  identical full card: ['cave_k8_p0.1_n100-200', 'cave_k10_p0.3_n100-200']
+  identical full card: ['kpart_k20_p0.5_n200-300', 'kpart_k30_p0.5_n200-300']
+  identical no-structure card: ['geo_r0.15_n100-200', 'interval_L0.03_n100-200']
+  identical no-structure card: ['sbm_k4_in0.5_out0.05_n100-200', 'ws_k20_p0.3_n100-200']
+  identical no-structure card: ['sbm_k3_in0.5_out0.05_n100-200', 'queen_keep0.7_n100-200']
+  identical no-structure card: ['sbm_k6_in0.4_out0.05_n100-200', 'hyb_r0.15_q0.05_n100-200']
+  identical no-structure card: ['ws_k10_p0.1_n320-500', 'cave_k10_p0.1_n320-500']
+  identical no-structure card: ['ws_k20_p0.3_n320-500', 'cave_k20_p0.2_n320-500']
+  identical no-structure card: ['cave_k8_p0.1_n100-200', 'cave_k10_p0.3_n100-200']
+  identical no-structure card: ['kpart_k20_p0.5_n200-300', 'kpart_k30_p0.5_n200-300']
+
+Checks: ALL PASSED
+
+Per-family table (probe stats): family | pool | n | dens | cv | clus/dens | DSATUR | LB | portfolio | headroom
+  kpart_k12_p0.15_n100-200           heldout_combo   163  0.14  0.20    1.0    8.9   4.0    8.5  0.40
+  kpart_k20_p0.2_n200-300            heldout_combo   235  0.19  0.13    1.0   15.0   5.1   14.0  1.00
+  gnp_d0.10_n200-300                 heldout_combo   243  0.10  0.19    1.0    9.6   4.0    8.9  0.70
+  gnp_d0.15_n100-200                 heldout_combo   152  0.15  0.20    1.0    9.1   4.3    8.8  0.30
+  gnp_d0.20_n100-200                 heldout_combo   146  0.20  0.17    1.0   11.0   5.0   10.3  0.70
+  sbm_k12_in0.5_out0.10_n200-300     heldout_combo   259  0.13  0.15    1.2   12.2   5.9   11.4  0.80
+  sbm_k5_in0.3_out0.15_n100-200      heldout_combo   156  0.18  0.18    1.0   10.8   4.4   10.1  0.70
+  sbm_k6_in0.6_out0.10_n200-300      heldout_combo   257  0.18  0.12    1.5   17.1   8.4   15.3  1.80
+  sbm_k8_in0.6_out0.10_n150-250      heldout_combo   194  0.16  0.15    1.4   12.5   7.2   11.5  1.00
+  sbm_k8_in0.6_out0.10_n200-300      heldout_combo   246  0.16  0.13    1.4   14.9   7.2   13.5  1.40
+  cave_k10_p0.1_n320-500             heldout_size    381  0.02  0.11   30.5    9.1   8.1    9.1  0.00
+  cave_k20_p0.2_n320-500             heldout_size    400  0.05  0.11   11.4   12.2  10.0   11.6  0.60
+  kpart_k10_p0.3_n320-500            heldout_size    421  0.27  0.08    1.0   30.3   6.6   18.7 11.60
+  kpart_k20_p0.2_n320-500            heldout_size    405  0.19  0.10    1.0   22.3   5.7   20.8  1.50
+  gnp_d0.05_n320-500                 heldout_size    412  0.05  0.22    1.0    8.5   3.5    8.1  0.40
+  gnp_d0.10_n320-500                 heldout_size    403  0.10  0.15    1.0   13.5   4.1   12.8  0.70
+  gnp_d0.30_n320-500                 heldout_size    429  0.30  0.08    1.0   34.5   7.1   31.5  3.00
+  interval_L0.05_n320-500            heldout_size    414  0.10  0.34    8.0   32.4  30.0   32.4  0.00
+  myciel_t2_p0.1_n320-500            heldout_size    417  0.06  0.73    0.9    7.9   2.0    7.6  0.30
+  myciel_t3_p0.05_n320-500           heldout_size    413  0.03  1.48    0.3    6.1   2.0    6.0  0.10
+  sbm_k4_in0.5_out0.05_n320-500      heldout_size    399  0.16  0.10    2.0   21.8   9.1   19.8  2.00
+  sbm_k5_in0.3_out0.15_n320-500      heldout_size    420  0.18  0.10    1.0   21.7   5.7   20.2  1.50
+  sbm_k8_in0.6_out0.10_n320-500      heldout_size    411  0.16  0.10    1.4   21.8   8.8   19.6  2.20
+  ws_k10_p0.1_n320-500               heldout_size    421  0.02  0.10   20.2    7.4   6.1    7.0  0.40
+  ws_k20_p0.3_n320-500               heldout_size    426  0.05  0.11    5.6   10.2   7.1    9.3  0.90
+  geo_r0.08_n200-300                 heldout_type    251  0.02  0.49   29.5    7.2   6.9    7.2  0.00
+  geo_r0.12_n100-200                 heldout_type    156  0.04  0.43   14.9    7.6   7.2    7.5  0.10
+  geo_r0.15_n100-200                 heldout_type    133  0.06  0.37   10.3    8.4   8.1    8.3  0.10
+  geo_r0.20_n100-200                 heldout_type    148  0.10  0.33    6.2   13.7  13.3   13.5  0.20
+  geo_r0.25_n100-200                 heldout_type    166  0.16  0.29    4.3   18.8  17.3   18.8  0.00
+  geo_r0.25_n50-100                  heldout_type     80  0.15  0.34    4.3   10.7   9.8   10.4  0.30
+  geo_r0.35_n50-100                  heldout_type     77  0.28  0.32    2.5   16.5  15.5   16.1  0.40
+  hyb_r0.12_q0.03_n200-300           heldout_type    260  0.07  0.24    3.5   10.5   9.4   10.1  0.40
+  hyb_r0.15_q0.02_n100-200           heldout_type    159  0.08  0.32    4.6   10.5   9.9   10.4  0.10
+  hyb_r0.15_q0.05_n100-200           heldout_type    157  0.11  0.26    2.4    9.5   8.9    9.3  0.20
+  hyb_r0.20_q0.05_n100-200           heldout_type    142  0.15  0.24    2.4   12.8  11.9   12.6  0.20
+  hyb_r0.25_q0.10_n50-100            heldout_type     79  0.24  0.24    1.6   11.2  10.7   11.0  0.20
+  queen_keep0.4_n200-300             heldout_type    254  0.13  0.15    2.5   16.2  15.8   16.2  0.00
+  queen_keep0.7_n100-200             heldout_type    165  0.20  0.12    1.7   14.7  13.3   13.7  1.00
+  queen_keep0.7_n200-300             heldout_type    244  0.16  0.12    2.0   17.3  16.4   16.8  0.50
+  queen_n100-200                     heldout_type    139  0.25  0.09    1.4   15.2  12.2   13.9  1.30
+  queen_n200-300                     heldout_type    238  0.20  0.08    1.7   19.5  15.9   18.4  1.10
+  queen_n49-121                      heldout_type     84  0.31  0.09    1.2   11.9   9.6   11.2  0.70
+  queen_n50-100                      heldout_type     66  0.34  0.10    1.2   11.2   8.5    9.9  1.30
+  ba_m12_n200-300                    heldout_type    257  0.09  0.64    1.9    9.1   8.5    9.0  0.10
+  ba_m5_n100-200                     heldout_type    160  0.06  0.75    2.2    5.6   4.9    5.6  0.00
+  ba_m8_n100-300                     heldout_type    183  0.09  0.66    1.9    7.1   6.6    7.0  0.10
+  ba_m8_n200-300                     heldout_type    238  0.07  0.70    2.1    7.1   6.6    7.0  0.10
+  plc_m3_p0.3_n100-200               heldout_type    158  0.04  0.93    6.3    4.1   3.8    4.0  0.10
+  plc_m5_p0.5_n100-200               heldout_type    141  0.07  0.88    4.5    5.9   5.1    5.9  0.00
+  plc_m8_p0.7_n200-300               heldout_type    262  0.06  0.79    4.5    7.9   6.7    7.8  0.10
+  cave_k10_p0.1_n200-300             train_pool      259  0.04  0.10   21.4    9.5   8.9    9.4  0.10
+  cave_k10_p0.3_n100-200             train_pool      146  0.06  0.18    6.2    6.9   6.1    6.5  0.40
+  cave_k15_p0.1_n100-200             train_pool      144  0.10  0.08    7.6   11.7  11.3   11.6  0.10
+  cave_k20_p0.2_n100-200             train_pool      140  0.14  0.10    4.3   12.2  10.7   11.7  0.50
+  cave_k20_p0.2_n200-300             train_pool      244  0.08  0.11    7.3   12.4  10.2   11.5  0.90
+  cave_k30_p0.1_n200-300             train_pool      222  0.13  0.06    5.7   18.9  17.5   18.3  0.60
+  cave_k8_p0.1_n100-200              train_pool      132  0.06  0.12   13.5    7.7   7.4    7.7  0.00
+  kpart_k10_p0.3_n100-200            train_pool      151  0.27  0.13    1.0   14.1   5.7   13.0  1.10
+  kpart_k10_p0.6_n200-300            train_pool      263  0.54  0.05    1.0   20.2  10.0   10.0 10.20
+  kpart_k15_p0.4_n200-300            train_pool      272  0.38  0.08    1.0   29.0   8.1   27.3  1.70
+  kpart_k20_p0.5_n150-250            train_pool      201  0.48  0.07    1.0   29.3   9.5   27.0  2.30
+  kpart_k20_p0.5_n200-300            train_pool      248  0.48  0.07    1.0   35.0   9.9   31.4  3.60
+  kpart_k30_p0.5_n200-300            train_pool      243  0.48  0.07    1.0   34.6  10.1   32.0  2.60
+  kpart_k8_p0.3_n100-200             train_pool      159  0.26  0.13    1.0   14.0   5.8   12.9  1.10
+  gnp_d0.05_n100-200                 train_pool      162  0.05  0.34    1.0    4.8   3.2    4.7  0.10
+  gnp_d0.05_n200-300                 train_pool      255  0.05  0.28    1.0    6.2   3.4    6.1  0.10
+  gnp_d0.10_n100-200                 train_pool      148  0.10  0.25    1.0    7.0   3.8    6.8  0.20
+  gnp_d0.10_n50-100                  train_pool       77  0.10  0.34    1.0    4.9   3.4    4.6  0.30
+  gnp_d0.20_n200-300                 train_pool      231  0.20  0.13    1.0   15.4   5.4   14.4  1.00
+  gnp_d0.30_n100-200                 train_pool      139  0.30  0.14    1.0   14.7   6.2   13.6  1.10
+  gnp_d0.30_n200-300                 train_pool      255  0.30  0.10    1.0   23.5   7.0   21.3  2.20
+  gnp_d0.30_n50-100                  train_pool       73  0.29  0.18    1.0    9.2   5.3    8.5  0.70
+  gnp_d0.40_n100-200                 train_pool      160  0.40  0.10    1.0   21.0   7.8   19.3  1.70
+  gnp_d0.50_n100-200                 train_pool      140  0.50  0.09    1.0   23.6   9.5   21.8  1.80
+  gnp_d0.50_n50-100                  train_pool       70  0.51  0.12    1.0   14.7   8.0   13.2  1.50
+  gnp_d0.70_n50-100                  train_pool       73  0.70  0.08    1.0   20.9  12.8   19.6  1.30
+  interval_L0.03_n100-200            train_pool      152  0.06  0.45   12.6   11.2  10.8   11.2  0.00
+  interval_L0.05_n200-300            train_pool      246  0.10  0.36    8.1   20.7  19.6   20.7  0.00
+  interval_L0.10_n100-200            train_pool      147  0.18  0.36    4.4   23.1  22.4   23.1  0.00
+  interval_L0.15_n50-100             train_pool       84  0.26  0.35    3.0   18.8  18.0   18.8  0.00
+  interval_L0.20_n100-200            train_pool      158  0.35  0.35    2.3   40.9  38.6   40.9  0.00
+  interval_L0.20_n50-100             train_pool       69  0.37  0.36    2.2   20.6  20.2   20.6  0.00
+  myciel_t1_p0.1_n100-200            train_pool      150  0.08  0.59    0.8    5.8   2.0    5.7  0.10
+  myciel_t1_p0.2_n100-200            train_pool      148  0.15  0.43    1.1    8.0   2.0    7.9  0.10
+  myciel_t1_p0.3_n50-100             train_pool       79  0.22  0.41    1.0    7.1   2.4    6.8  0.30
+  myciel_t2_p0.05_n100-200           train_pool      159  0.04  1.43    0.2    4.7   2.0    4.7  0.00
+  myciel_t2_p0.1_n100-200            train_pool      162  0.07  0.88    0.6    5.6   2.0    5.4  0.20
+  myciel_t2_p0.2_n200-300            train_pool      249  0.11  0.59    1.0    8.4   2.0    7.9  0.50
+  myciel_t3_p0.05_n100-200           train_pool      145  0.05  1.53    0.0    5.1   2.0    5.1  0.00
+  myciel_t3_p0.1_n200-300            train_pool      257  0.06  1.07    0.4    6.2   2.0    6.0  0.20
+  sbm_k10_in0.5_out0.05_n200-300     train_pool      248  0.09  0.18    1.9   10.0   6.2    9.3  0.70
+  sbm_k10_in0.7_out0.20_n200-300     train_pool      252  0.25  0.11    1.1   20.0   8.4   18.4  1.60
+  sbm_k3_in0.5_out0.05_n100-200      train_pool      150  0.20  0.14    1.9   12.6   7.3   11.4  1.20
+  sbm_k4_in0.5_out0.05_n100-200      train_pool      138  0.16  0.17    2.0   10.3   6.8    9.3  1.00
+  sbm_k4_in0.7_out0.10_n50-100       train_pool       72  0.24  0.16    1.7    9.2   7.9    8.7  0.50
+  sbm_k6_in0.4_out0.05_n100-200      train_pool      160  0.11  0.20    1.8    8.0   5.0    7.7  0.30
+  sbm_k6_in0.8_out0.05_n50-100       train_pool       68  0.17  0.19    2.9    8.1   7.5    7.7  0.40
+  sbm_k8_in0.3_out0.10_n100-200      train_pool      156  0.12  0.21    1.0    8.3   4.2    7.9  0.40
+  ws_k10_p0.1_n100-200               train_pool      149  0.07  0.10    6.9    7.2   6.0    6.6  0.60
+  ws_k10_p0.3_n50-100                train_pool       75  0.14  0.15    2.0    6.2   5.1    5.9  0.30
+  ws_k16_p0.1_n200-300               train_pool      254  0.06  0.08    8.1   10.0   8.5    9.0  1.00
+  ws_k20_p0.3_n100-200               train_pool      133  0.16  0.11    1.9   10.1   7.2    9.1  1.00
+  ws_k30_p0.2_n200-300               train_pool      260  0.12  0.08    3.4   14.3  10.1   12.9  1.40
+  ws_k6_p0.05_n100-200               train_pool      134  0.05  0.09   10.9    5.2   4.0    4.8  0.40
+  ws_k8_p0.5_n50-100                 train_pool       74  0.11  0.21    1.4    5.2   4.0    5.1  0.10

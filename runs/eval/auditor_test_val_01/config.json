@@ -1,0 +1,25 @@
+{
+  "run_id": "auditor_test_val_01",
+  "backend": "mock",
+  "model_name": "mock-model",
+  "split": "val",
+  "seed_range": "val",
+  "k": 2,
+  "n_samples": 2,
+  "temperature": 0.7,
+  "n_graphs": 2,
+  "seed": 123,
+  "eps": 0.05,
+  "prompt_version": "v1",
+  "force_unlock_used": false,
+  "config_hash": "e605180ffc7e",
+  "git_commit": "unknown",
+  "timestamp": "2026-10-16T04:58:45.731581+00:00",
+  "library_versions": {
+    "numpy": "2.5.3",
+    "numba": "0.68.0",
+    "scipy": "1.18.1",
+    "networkx": "3.7",
+    "pandas": "3.0.6"
+  }
+}

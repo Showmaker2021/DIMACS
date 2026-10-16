@@ -1,0 +1,109 @@
+{
+  "cost_evolution_per_family": 0.019600000000000003,
+  "cost_inference_per_card": 9.94e-05,
+  "amortized_breakdown": {
+    "teacher_data_collection": 1.9600000000000002,
+    "sft_training": 8.0,
+    "grpo_training": 24.0,
+    "total_amortized_cost": 33.96
+  },
+  "break_even_families": 1741.4848773883878,
+  "sensitivity_analysis": [
+    {
+      "api_price_multiplier": 0.5,
+      "gpu_hourly_rate": 1.0,
+      "cost_evolution_per_family": 0.009800000000000001,
+      "cost_inference_per_card": 4.97e-05,
+      "total_amortized_cost": 16.98,
+      "break_even_families": 1741.5
+    },
+    {
+      "api_price_multiplier": 0.5,
+      "gpu_hourly_rate": 2.0,
+      "cost_evolution_per_family": 0.009800000000000001,
+      "cost_inference_per_card": 4.97e-05,
+      "total_amortized_cost": 32.980000000000004,
+      "break_even_families": 3382.5
+    },
+    {
+      "api_price_multiplier": 0.5,
+      "gpu_hourly_rate": 4.0,
+      "cost_evolution_per_family": 0.009800000000000001,
+      "cost_inference_per_card": 4.97e-05,
+      "total_amortized_cost": 64.98,
+      "break_even_families": 6664.4
+    },
+    {
+      "api_price_multiplier": 1.0,
+      "gpu_hourly_rate": 1.0,
+      "cost_evolution_per_family": 0.019600000000000003,
+      "cost_inference_per_card": 9.94e-05,
+      "total_amortized_cost": 17.96,
+      "break_even_families": 921.0
+    },
+    {
+      "api_price_multiplier": 1.0,
+      "gpu_hourly_rate": 2.0,
+      "cost_evolution_per_family": 0.019600000000000003,
+      "cost_inference_per_card": 9.94e-05,
+      "total_amortized_cost": 33.96,
+      "break_even_families": 1741.5
+    },
+    {
+      "api_price_multiplier": 1.0,
+      "gpu_hourly_rate": 4.0,
+      "cost_evolution_per_family": 0.019600000000000003,
+      "cost_inference_per_card": 9.94e-05,
+      "total_amortized_cost": 65.96000000000001,
+      "break_even_families": 3382.5
+    },
+    {
+      "api_price_multiplier": 2.0,
+      "gpu_hourly_rate": 1.0,
+      "cost_evolution_per_family": 0.039200000000000006,
+      "cost_inference_per_card": 0.0001988,
+      "total_amortized_cost": 19.92,
+      "break_even_families": 510.8
+    },
+    {
+      "api_price_multiplier": 2.0,
+      "gpu_hourly_rate": 2.0,
+      "cost_evolution_per_family": 0.039200000000000006,
+      "cost_inference_per_card": 0.0001988,
+      "total_amortized_cost": 35.92,
+      "break_even_families": 921.0
+    },
+    {
+      "api_price_multiplier": 2.0,
+      "gpu_hourly_rate": 4.0,
+      "cost_evolution_per_family": 0.039200000000000006,
+      "cost_inference_per_card": 0.0001988,
+      "total_amortized_cost": 67.92,
+      "break_even_families": 1741.5
+    },
+    {
+      "api_price_multiplier": 5.0,
+      "gpu_hourly_rate": 1.0,
+      "cost_evolution_per_family": 0.098,
+      "cost_inference_per_card": 0.000497,
+      "total_amortized_cost": 25.8,
+      "break_even_families": 264.6
+    },
+    {
+      "api_price_multiplier": 5.0,
+      "gpu_hourly_rate": 2.0,
+      "cost_evolution_per_family": 0.098,
+      "cost_inference_per_card": 0.000497,
+      "total_amortized_cost": 41.8,
+      "break_even_families": 428.7
+    },
+    {
+      "api_price_multiplier": 5.0,
+      "gpu_hourly_rate": 4.0,
+      "cost_evolution_per_family": 0.098,
+      "cost_inference_per_card": 0.000497,
+      "total_amortized_cost": 73.8,
+      "break_even_families": 756.9
+    }
+  ]
+}

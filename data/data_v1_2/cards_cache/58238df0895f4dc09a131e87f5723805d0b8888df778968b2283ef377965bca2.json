@@ -1,0 +1,5 @@
+{
+  "card": "clustered cliques, nodes 100-200, density 0.10, low degree variance, high clustering",
+  "p_idx": 3,
+  "paraphrase": "Network ensemble with nodes 100-200, density 0.10, low degree variance, and high clustering, generated via caveman structure."
+}

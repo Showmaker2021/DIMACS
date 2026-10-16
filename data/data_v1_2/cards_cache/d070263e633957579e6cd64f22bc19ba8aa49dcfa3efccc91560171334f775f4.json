@@ -1,0 +1,5 @@
+{
+  "card": "geometric plus random edges, nodes 100-200, density 0.15, medium degree variance, moderate clustering",
+  "p_idx": 3,
+  "paraphrase": "Network ensemble with nodes 100-200, density 0.15, medium degree variance, and moderate clustering, generated via hybrid_geometric structure."
+}

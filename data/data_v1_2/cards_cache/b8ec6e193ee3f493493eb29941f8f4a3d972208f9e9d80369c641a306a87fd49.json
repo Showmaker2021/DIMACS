@@ -1,0 +1,5 @@
+{
+  "card": "scale-free, nodes 100-200, density 0.04, high degree variance, high clustering",
+  "p_idx": 3,
+  "paraphrase": "Network ensemble with nodes 100-200, density 0.04, high degree variance, and high clustering, generated via scale_free structure."
+}

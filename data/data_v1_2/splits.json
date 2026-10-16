@@ -1,0 +1,1274 @@
+{
+  "version": "v1.2",
+  "binning": {
+    "combination_attributes": [
+      "density_bin",
+      "degree_variance_bin",
+      "clustering_bin"
+    ],
+    "density_edges": [
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "density_bins_description": {
+      "0": "density < 0.05",
+      "1": "0.05 <= density < 0.10",
+      "2": "0.10 <= density < 0.20",
+      "3": "0.20 <= density < 0.40",
+      "4": "density >= 0.40"
+    },
+    "degree_variance_thresholds": {
+      "metric": "deg_cv = std(deg) / mean(deg)",
+      "low": "deg_cv < 0.2",
+      "medium": "0.2 <= deg_cv < 0.5",
+      "high": "deg_cv >= 0.5"
+    },
+    "clustering_thresholds": {
+      "metric": "clustering_ratio = clustering / max(density, 1e-9)",
+      "low": "ratio < 1.5",
+      "moderate": "1.5 <= ratio < 4.0",
+      "high": "ratio >= 4.0"
+    }
+  },
+  "heldout_combinations": [
+    [
+      2,
+      "low",
+      "low"
+    ]
+  ],
+  "splits": {
+    "train_pool": {
+      "seed_range": "train",
+      "rl_seed_range": "rl_train_pool",
+      "seed_ranges": [
+        "train",
+        "rl_train_pool"
+      ],
+      "count": 41,
+      "families": [
+        {
+          "family_id": "ba_m12_n200-300",
+          "structure_type": "scale_free",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "ba_m8_n100-300",
+          "structure_type": "scale_free",
+          "n_range": [
+            100,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "ba_m8_n200-300",
+          "structure_type": "scale_free",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "cave_k10_p0.1_n200-300",
+          "structure_type": "caveman",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "cave_k10_p0.3_n100-200",
+          "structure_type": "caveman",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "cave_k20_p0.2_n100-200",
+          "structure_type": "caveman",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "cave_k20_p0.2_n200-300",
+          "structure_type": "caveman",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "cave_k30_p0.1_n200-300",
+          "structure_type": "caveman",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "gnp_d0.05_n100-200",
+          "structure_type": "gnp",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.05_n200-300",
+          "structure_type": "gnp",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.10_n100-200",
+          "structure_type": "gnp",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.20_n200-300",
+          "structure_type": "gnp",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.30_n100-200",
+          "structure_type": "gnp",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.30_n200-300",
+          "structure_type": "gnp",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.30_n50-100",
+          "structure_type": "gnp",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.50_n100-200",
+          "structure_type": "gnp",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 4,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.50_n50-100",
+          "structure_type": "gnp",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 4,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.70_n50-100",
+          "structure_type": "gnp",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 4,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "interval_L0.05_n200-300",
+          "structure_type": "interval",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "interval_L0.10_n100-200",
+          "structure_type": "interval",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "interval_L0.20_n100-200",
+          "structure_type": "interval",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "interval_L0.20_n50-100",
+          "structure_type": "interval",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "kpart_k10_p0.3_n100-200",
+          "structure_type": "equipartite",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "kpart_k10_p0.6_n200-300",
+          "structure_type": "equipartite",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 4,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "kpart_k20_p0.5_n150-250",
+          "structure_type": "equipartite",
+          "n_range": [
+            150,
+            250
+          ],
+          "density_bin": 4,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "kpart_k20_p0.5_n200-300",
+          "structure_type": "equipartite",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 4,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "kpart_k30_p0.5_n200-300",
+          "structure_type": "equipartite",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 4,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t1_p0.1_n100-200",
+          "structure_type": "mycielski",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t1_p0.2_n100-200",
+          "structure_type": "mycielski",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t2_p0.1_n100-200",
+          "structure_type": "mycielski",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t2_p0.2_n200-300",
+          "structure_type": "mycielski",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t3_p0.05_n100-200",
+          "structure_type": "mycielski",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t3_p0.1_n200-300",
+          "structure_type": "mycielski",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "plc_m5_p0.5_n100-200",
+          "structure_type": "scale_free",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "plc_m8_p0.7_n200-300",
+          "structure_type": "scale_free",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "sbm_k10_in0.5_out0.05_n200-300",
+          "structure_type": "planted_partition",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "sbm_k10_in0.7_out0.20_n200-300",
+          "structure_type": "planted_partition",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k3_in0.5_out0.05_n100-200",
+          "structure_type": "planted_partition",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "sbm_k4_in0.5_out0.05_n100-200",
+          "structure_type": "planted_partition",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "sbm_k6_in0.8_out0.05_n50-100",
+          "structure_type": "planted_partition",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "sbm_k8_in0.3_out0.10_n100-200",
+          "structure_type": "planted_partition",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        }
+      ]
+    },
+    "val": {
+      "seed_range": "val",
+      "seed_ranges": [
+        "val"
+      ],
+      "count": 7,
+      "families": [
+        {
+          "family_id": "cave_k8_p0.1_n100-200",
+          "structure_type": "caveman",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "gnp_d0.10_n50-100",
+          "structure_type": "gnp",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "interval_L0.03_n100-200",
+          "structure_type": "interval",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "kpart_k8_p0.3_n100-200",
+          "structure_type": "equipartite",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t1_p0.3_n50-100",
+          "structure_type": "mycielski",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "plc_m3_p0.3_n100-200",
+          "structure_type": "scale_free",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "high",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "sbm_k4_in0.7_out0.10_n50-100",
+          "structure_type": "planted_partition",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        }
+      ]
+    },
+    "test_interp": {
+      "seed_range": "test_interp",
+      "seed_ranges": [
+        "test_interp"
+      ],
+      "count": 7,
+      "families": [
+        {
+          "family_id": "ba_m5_n100-200",
+          "structure_type": "scale_free",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "cave_k15_p0.1_n100-200",
+          "structure_type": "caveman",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "gnp_d0.40_n100-200",
+          "structure_type": "gnp",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "interval_L0.15_n50-100",
+          "structure_type": "interval",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "kpart_k15_p0.4_n200-300",
+          "structure_type": "equipartite",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t2_p0.05_n100-200",
+          "structure_type": "mycielski",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k6_in0.4_out0.05_n100-200",
+          "structure_type": "planted_partition",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        }
+      ]
+    },
+    "test_extrap": {
+      "seed_range": "test_extrap",
+      "seed_ranges": [
+        "test_extrap"
+      ],
+      "count": 15,
+      "families": [
+        {
+          "family_id": "cave_k10_p0.1_n320-500",
+          "structure_type": "caveman",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "cave_k20_p0.2_n320-500",
+          "structure_type": "caveman",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "gnp_d0.05_n320-500",
+          "structure_type": "gnp",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.10_n320-500",
+          "structure_type": "gnp",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.30_n320-500",
+          "structure_type": "gnp",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "interval_L0.05_n320-500",
+          "structure_type": "interval",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "kpart_k10_p0.3_n320-500",
+          "structure_type": "equipartite",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "kpart_k20_p0.2_n320-500",
+          "structure_type": "equipartite",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t2_p0.1_n320-500",
+          "structure_type": "mycielski",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "myciel_t3_p0.05_n320-500",
+          "structure_type": "mycielski",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "high",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k4_in0.5_out0.05_n320-500",
+          "structure_type": "planted_partition",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "sbm_k5_in0.3_out0.15_n320-500",
+          "structure_type": "planted_partition",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k8_in0.6_out0.10_n320-500",
+          "structure_type": "planted_partition",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "ws_k10_p0.1_n320-500",
+          "structure_type": "small_world",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "ws_k20_p0.3_n320-500",
+          "structure_type": "small_world",
+          "n_range": [
+            320,
+            500
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        }
+      ]
+    },
+    "test_comp": {
+      "seed_range": "test_comp",
+      "seed_ranges": [
+        "test_comp"
+      ],
+      "heldout_combinations": [
+        [
+          2,
+          "low",
+          "low"
+        ]
+      ],
+      "count": 10,
+      "families": [
+        {
+          "family_id": "gnp_d0.10_n200-300",
+          "structure_type": "gnp",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.15_n100-200",
+          "structure_type": "gnp",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "gnp_d0.20_n100-200",
+          "structure_type": "gnp",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "kpart_k12_p0.15_n100-200",
+          "structure_type": "equipartite",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "kpart_k20_p0.2_n200-300",
+          "structure_type": "equipartite",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k12_in0.5_out0.10_n200-300",
+          "structure_type": "planted_partition",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k5_in0.3_out0.15_n100-200",
+          "structure_type": "planted_partition",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k6_in0.6_out0.10_n200-300",
+          "structure_type": "planted_partition",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k8_in0.6_out0.10_n150-250",
+          "structure_type": "planted_partition",
+          "n_range": [
+            150,
+            250
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "sbm_k8_in0.6_out0.10_n200-300",
+          "structure_type": "planted_partition",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        }
+      ]
+    },
+    "heldout_type": {
+      "seed_range": "test_heldout_type",
+      "seed_ranges": [
+        "test_heldout_type"
+      ],
+      "target_type": "small_world",
+      "count": 26,
+      "families": [
+        {
+          "family_id": "geo_r0.08_n200-300",
+          "structure_type": "geometric",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "geo_r0.12_n100-200",
+          "structure_type": "geometric",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "geo_r0.15_n100-200",
+          "structure_type": "geometric",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "geo_r0.20_n100-200",
+          "structure_type": "geometric",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "geo_r0.25_n100-200",
+          "structure_type": "geometric",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "geo_r0.25_n50-100",
+          "structure_type": "geometric",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "geo_r0.35_n50-100",
+          "structure_type": "geometric",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "hyb_r0.12_q0.03_n200-300",
+          "structure_type": "hybrid_geometric",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "hyb_r0.15_q0.02_n100-200",
+          "structure_type": "hybrid_geometric",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "hyb_r0.15_q0.05_n100-200",
+          "structure_type": "hybrid_geometric",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "hyb_r0.20_q0.05_n100-200",
+          "structure_type": "hybrid_geometric",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "hyb_r0.25_q0.10_n50-100",
+          "structure_type": "hybrid_geometric",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "queen_keep0.4_n200-300",
+          "structure_type": "queen",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "queen_keep0.7_n100-200",
+          "structure_type": "queen",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "queen_keep0.7_n200-300",
+          "structure_type": "queen",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "queen_n100-200",
+          "structure_type": "queen",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "queen_n200-300",
+          "structure_type": "queen",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "queen_n49-121",
+          "structure_type": "queen",
+          "n_range": [
+            49,
+            121
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "queen_n50-100",
+          "structure_type": "queen",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 3,
+          "degree_variance_bin": "low",
+          "clustering_bin": "low"
+        },
+        {
+          "family_id": "ws_k10_p0.1_n100-200",
+          "structure_type": "small_world",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "ws_k10_p0.3_n50-100",
+          "structure_type": "small_world",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "ws_k16_p0.1_n200-300",
+          "structure_type": "small_world",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 1,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "ws_k20_p0.3_n100-200",
+          "structure_type": "small_world",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "ws_k30_p0.2_n200-300",
+          "structure_type": "small_world",
+          "n_range": [
+            200,
+            300
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "low",
+          "clustering_bin": "moderate"
+        },
+        {
+          "family_id": "ws_k6_p0.05_n100-200",
+          "structure_type": "small_world",
+          "n_range": [
+            100,
+            200
+          ],
+          "density_bin": 0,
+          "degree_variance_bin": "low",
+          "clustering_bin": "high"
+        },
+        {
+          "family_id": "ws_k8_p0.5_n50-100",
+          "structure_type": "small_world",
+          "n_range": [
+            50,
+            100
+          ],
+          "density_bin": 2,
+          "degree_variance_bin": "medium",
+          "clustering_bin": "low"
+        }
+      ]
+    }
+  }
+}

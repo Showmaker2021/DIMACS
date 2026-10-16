@@ -1,0 +1,25 @@
+{
+  "run_id": "auditor_lock_03",
+  "backend": "mock",
+  "model_name": "mock-model",
+  "split": "test_interp",
+  "seed_range": "test_interp",
+  "k": 1,
+  "n_samples": 1,
+  "temperature": 0.7,
+  "n_graphs": 2,
+  "seed": 42,
+  "eps": 0.05,
+  "prompt_version": "v1",
+  "force_unlock_used": true,
+  "config_hash": "b415c96ecfaa",
+  "git_commit": "unknown",
+  "timestamp": "2026-10-16T04:59:40.114475+00:00",
+  "library_versions": {
+    "numpy": "2.5.3",
+    "numba": "0.68.0",
+    "scipy": "1.18.1",
+    "networkx": "3.7",
+    "pandas": "3.0.6"
+  }
+}

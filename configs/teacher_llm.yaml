@@ -1,0 +1,18 @@
+# Teacher LLM Configuration for Offline Evolutionary Distillation
+provider: "deepseek"
+model: "deepseek-chat"
+base_temperature: 0.7
+max_tokens: 1024
+
+rate_limit:
+  requests_per_minute: 12
+  pacing_seconds: 5.0
+
+retry:
+  max_retries: 2
+  backoff_factor: 2.0
+  initial_wait_seconds: 10.0
+  max_wait_seconds: 60.0
+
+# Name of the environment variable containing the API key (NEVER write actual keys here)
+api_key_env: "DEEPSEEK_API_KEY"

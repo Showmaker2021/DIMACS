@@ -1,0 +1,39 @@
+{
+ "version": "v1",
+ "preset": "full",
+ "splits": {
+  "train": [
+   0,
+   100
+  ],
+  "val": [
+   1000,
+   20
+  ],
+  "test": [
+   2000,
+   50
+  ],
+  "probe": [
+   9000,
+   10
+  ]
+ },
+ "counts": {
+  "train": 100,
+  "val": 20,
+  "test": 50,
+  "probe": 10
+ },
+ "baseline_train_seeds": 20,
+ "heldout_types": [
+  "geometric",
+  "hybrid_geometric",
+  "queen",
+  "scale_free"
+ ],
+ "heldout_size_min": 320,
+ "combo_holdout_fraction": 0.12,
+ "combo_seed": 2026,
+ "no_headroom_gap": 0.25
+}

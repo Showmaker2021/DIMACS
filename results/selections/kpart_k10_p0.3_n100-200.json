@@ -1,0 +1,16 @@
+{
+  "family_id": "kpart_k10_p0.3_n100-200",
+  "card": "hidden k-partite (equipartite), nodes 100-200, density 0.27, low degree variance, low clustering",
+  "selection_split": "teacher_val",
+  "selected_candidate": {
+    "program": "def priority(adj, colors, sat, deg, uncolored_deg):\n    mask = (colors < 0).astype(np.float64)\n    n = adj.shape[0]\n    dens = uncolored_deg.astype(np.float64)\n    sat_f = sat.astype(np.float64)\n    deg_f = deg.astype(np.float64)\n    \n    scores = sat_f * (n * n * 2.0) + dens * (n * 2.0) + deg_f\n    return scores * mask",
+    "fitness_train": -0.8500000000000014,
+    "mean_train": 14.55
+  },
+  "teacher_val_mean_colors": 13.9,
+  "r_teacher_val": 12.85,
+  "val_mean_colors_secondary": 14.2,
+  "r_val_secondary": 13.15,
+  "is_fallback": true,
+  "fallback_reason": "Worse or equal to R(F) on teacher_val"
+}

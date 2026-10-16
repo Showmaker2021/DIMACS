@@ -1,0 +1,5 @@
+{
+  "card": "random (Erdos-Renyi), nodes 320-500, density 0.10, low degree variance, low clustering",
+  "p_idx": 2,
+  "paraphrase": "Distribution of gnp network instances having nodes 320-500 and density 0.10. The topology exhibits low degree variance alongside low clustering."
+}

@@ -1,0 +1,5 @@
+{
+  "card": "geometric plus random edges, nodes 100-200, density 0.11, medium degree variance, moderate clustering",
+  "p_idx": 2,
+  "paraphrase": "Distribution of hybrid_geometric network instances having nodes 100-200 and density 0.11. The topology exhibits medium degree variance alongside moderate clustering."
+}

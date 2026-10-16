@@ -1,0 +1,5 @@
+{
+  "card": "planted partition communities, nodes 100-200, density 0.16, low degree variance, moderate clustering",
+  "p_idx": 2,
+  "paraphrase": "Distribution of planted_partition network instances having nodes 100-200 and density 0.16. The topology exhibits low degree variance alongside moderate clustering."
+}

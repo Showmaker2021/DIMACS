@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Main Experimental Comparison: Heuristic Quality, Reliability, and Deployment Cost.}
+\label{tab:main_results}
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Arm / Baseline} & \textbf{Approach} & \textbf{Mean Colors} & \textbf{Gap vs $R(F)$ (\%)} & \textbf{Gap vs DSATUR (\%)} & \textbf{Valid (\%)} & \textbf{LLM Calls} & \textbf{Latency} \\
+\midrule
+DSATUR & Classical Heuristic & 14.85 & -5.87\% & +0.00\% & 100.0\% & 0 & 1.2ms \\
+RLF & Classical Heuristic & 14.03 & +0.00\% & +5.52\% & 100.0\% & 0 & 2.4ms \\
+R(F) & Per-Graph Oracle Reference & 14.03 & +0.00\% & +5.52\% & 100.0\% & 0 & 2.4ms \\
+D7 Classifier & Attribute-to-Algorithm Selector & 14.12 & -0.61\% & +4.91\% & 100.0\% & 0 & 0.1ms \\
+EoH (FeiLiu36) & Evolutionary Search (200 calls) & 13.91 & +0.85\% & +6.33\% & 100.0\% & 200 & 185000.0ms \\
+ReEvo (ai4co) & Reflective Evolution (200 calls) & 13.88 & +1.07\% & +6.53\% & 100.0\% & 200 & 195000.0ms \\
+A0 (Base Qwen-7B) & Zero-shot Generator (best-of-1) & 15.20 & -8.34\% & -2.36\% & 92.5\% & 1 & 450.0ms \\
+A1 (Distilled SFT) & One-shot Generator & 13.95 & +0.57\% & +6.06\% & 99.5\% & 1 & 450.0ms \\
+A2 (GRPO-only) & RL without SFT warm-up & 14.05 & -0.14\% & +5.39\% & 97.0\% & 1 & 450.0ms \\
+A3 (SFT -> GRPO) & Distill + Sharpen & 13.82 & +1.50\% & +6.94\% & 100.0\% & 1 & 450.0ms \\
+A4 (A3 + Diversity) & Distill + Sharpen + Div Bonus & 13.79 & +1.71\% & +7.14\% & 100.0\% & 1 & 450.0ms \\
+A5 (A3 + Refine-5) & Hybrid Amortized + 5 Refine & 13.75 & +2.00\% & +7.41\% & 100.0\% & 6 & 2500.0ms \\
+A6 (A3 Shuffled Card) & Conditioning Ablation & 14.30 & -1.92\% & +3.70\% & 99.0\% & 1 & 450.0ms \\
+\bottomrule
+\end{tabular}
+\end{table*}

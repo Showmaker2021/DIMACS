@@ -1,0 +1,41 @@
+================================================================================
+DIAGNOSTIC D1' SUMMARY REPORT: GRAPH CEILING vs REFERENCE R(F)
+Graph Ceiling = min(DSATUR, RLF, IG-2000-DS, IG-2000-RLF, TabuCol)
+Reference R(F) = min(DSATUR, RLF, Universal) on Val
+================================================================================
+
+1. AGGREGATE HEADROOM: R(F) -> Graph Ceiling (20 test graphs per family)
+   Non-Control Families (N=99):
+     Mean Headroom (colors)   : 0.949 colors  [95% CI: 0.670, 1.305]
+     Mean Headroom (%)        : 8.00%       [95% CI: 5.96%, 10.34%]
+     Median Headroom (colors) : 0.600 colors
+     Median Headroom (%)      : 5.73%
+     Families with Headroom >= 3.0% : 66 / 99 (66.7%)
+   Interval Control Families (N=7):
+     Mean Headroom (colors)   : 0.000 colors (0.00%, verified DSATUR optimal = clique LB)
+   Overall (All N=106):
+     Mean Headroom (colors)   : 0.886 colors  [95% CI: 0.619, 1.202]
+     Mean Headroom (%)        : 6.98%       [95% CI: 5.04%, 9.30%]
+
+2. D1' BREAKDOWN BY POOL (Non-Control families):
+Pool               | N    | Mean R(F)    | Ceiling (20)   | Headroom (colors)  | Headroom (%) [95% CI]
+----------------------------------------------------------------------------------------------
+train_pool         | 49   | 11.75        | 10.50          |  1.247 [ 0.79, 1.83] | 10.62% [ 7.51%, 14.03%]
+heldout_type       | 26   | 10.93        | 10.69          |  0.233 [ 0.13, 0.34] |  2.13% [ 1.28%,  3.05%]
+heldout_size       | 14   | 14.51        | 13.19          |  1.314 [ 0.55, 2.54] |  9.06% [ 4.61%, 17.35%]
+heldout_combo      | 10   | 11.23        | 10.39          |  0.840 [ 0.75, 0.93] |  7.48% [ 6.81%,  8.10%]
+
+3. D1' BREAKDOWN BY STRUCTURE TYPE (All families):
+Structure Type       | N    | Mean R(F)    | Ceiling (20)   | Headroom (colors)  | Headroom (%) [95% CI]
+----------------------------------------------------------------------------------------------
+caveman              | 9    | 11.11        | 10.79          |  0.311 [ 0.12, 0.52] |  2.80% [ 1.17%,  4.24%]
+equipartite          | 11   | 19.56        | 15.60          |  3.964 [ 2.20, 5.84] | 20.26% [13.12%, 28.09%]
+geometric            | 7    | 11.61        | 11.52          |  0.086 [ 0.03, 0.16] |  0.74% [ 0.27%,  1.21%]
+gnp                  | 18   | 13.18        | 12.13          |  1.050 [ 0.78, 1.34] |  7.97% [ 6.95%,  8.92%]
+hybrid_geometric     | 5    | 10.86        | 10.66          |  0.200 [ 0.12, 0.27] |  1.84% [ 1.15%,  2.40%]
+interval             | 7    | 24.48        | 24.48          |  0.000 [ 0.00, 0.00] |  0.00% [ 0.00%,  0.00%]
+mycielski            | 10   | 6.39         | 6.17           |  0.220 [ 0.10, 0.37] |  3.44% [ 1.61%,  5.24%]
+planted_partition    | 16   | 12.71        | 11.81          |  0.900 [ 0.75, 1.04] |  7.08% [ 6.44%,  7.75%]
+queen                | 7    | 14.56        | 14.04          |  0.521 [ 0.26, 0.78] |  3.58% [ 1.75%,  5.70%]
+scale_free           | 7    | 6.66         | 6.55           |  0.114 [ 0.04, 0.19] |  1.71% [ 0.59%,  2.59%]
+small_world          | 9    | 7.93         | 7.26           |  0.667 [ 0.52, 0.82] |  8.41% [ 7.09%,  9.80%]

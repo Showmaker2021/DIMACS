@@ -1,0 +1,1168 @@
+{
+  "gnp_d0.05_n200-300": {
+    "family_id": "gnp_d0.05_n200-300",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 200-300, density 0.05, medium degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 200-300, density 0.05, medium degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 200-300 at density 0.05, with medium degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 200-300 and density 0.05. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.05, medium degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.10_n100-200": {
+    "family_id": "gnp_d0.10_n100-200",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 100-200, density 0.10, medium degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 100-200, density 0.10, medium degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 100-200 at density 0.10, with medium degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 100-200 and density 0.10. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.10, medium degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.30_n100-200": {
+    "family_id": "gnp_d0.30_n100-200",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 100-200, density 0.30, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 100-200, density 0.30, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 100-200 at density 0.30, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 100-200 and density 0.30. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.30, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.50_n50-100": {
+    "family_id": "gnp_d0.50_n50-100",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 50-100, density 0.51, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 50-100, density 0.51, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.5",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 50-100 at density 0.51, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 50-100 and density 0.51. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 50-100, density 0.51, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "geo_r0.15_n100-200": {
+    "family_id": "geo_r0.15_n100-200",
+    "structure_type": "geometric",
+    "card": "random geometric, nodes 100-200, density 0.06, medium degree variance, high clustering",
+    "card_detailed": "random geometric, nodes 100-200, density 0.06, medium degree variance, high clustering, generator: 2D random geometric graph with connection radius r=0.15",
+    "paraphrases": [
+      "Graph instances belonging to the geometric family, characterized by size nodes 100-200 at density 0.06, with medium degree variance and high clustering.",
+      "Distribution of geometric network instances having nodes 100-200 and density 0.06. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.06, medium degree variance, and high clustering, generated via geometric structure."
+    ]
+  },
+  "geo_r0.25_n100-200": {
+    "family_id": "geo_r0.25_n100-200",
+    "structure_type": "geometric",
+    "card": "random geometric, nodes 100-200, density 0.16, medium degree variance, high clustering",
+    "card_detailed": "random geometric, nodes 100-200, density 0.16, medium degree variance, high clustering, generator: 2D random geometric graph with connection radius r=0.25",
+    "paraphrases": [
+      "Graph instances belonging to the geometric family, characterized by size nodes 100-200 at density 0.16, with medium degree variance and high clustering.",
+      "Distribution of geometric network instances having nodes 100-200 and density 0.16. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.16, medium degree variance, and high clustering, generated via geometric structure."
+    ]
+  },
+  "hyb_r0.15_q0.02_n100-200": {
+    "family_id": "hyb_r0.15_q0.02_n100-200",
+    "structure_type": "hybrid_geometric",
+    "card": "geometric plus random edges, nodes 100-200, density 0.08, medium degree variance, high clustering",
+    "card_detailed": "geometric plus random edges, nodes 100-200, density 0.08, medium degree variance, high clustering, generator: hybrid 2D geometric graph with connection radius r=0.15 and random edge noise q=0.02",
+    "paraphrases": [
+      "Graph instances belonging to the hybrid_geometric family, characterized by size nodes 100-200 at density 0.08, with medium degree variance and high clustering.",
+      "Distribution of hybrid_geometric network instances having nodes 100-200 and density 0.08. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.08, medium degree variance, and high clustering, generated via hybrid_geometric structure."
+    ]
+  },
+  "hyb_r0.20_q0.05_n100-200": {
+    "family_id": "hyb_r0.20_q0.05_n100-200",
+    "structure_type": "hybrid_geometric",
+    "card": "geometric plus random edges, nodes 100-200, density 0.15, medium degree variance, moderate clustering",
+    "card_detailed": "geometric plus random edges, nodes 100-200, density 0.15, medium degree variance, moderate clustering, generator: hybrid 2D geometric graph with connection radius r=0.20 and random edge noise q=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the hybrid_geometric family, characterized by size nodes 100-200 at density 0.15, with medium degree variance and moderate clustering.",
+      "Distribution of hybrid_geometric network instances having nodes 100-200 and density 0.15. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.15, medium degree variance, and moderate clustering, generated via hybrid_geometric structure."
+    ]
+  },
+  "ba_m8_n100-300": {
+    "family_id": "ba_m8_n100-300",
+    "structure_type": "scale_free",
+    "card": "scale-free, nodes 100-300, density 0.09, high degree variance, moderate clustering",
+    "card_detailed": "scale-free, nodes 100-300, density 0.09, high degree variance, moderate clustering, generator: Barabasi-Albert scale-free graph with preferential attachment m=8 edges per new vertex",
+    "paraphrases": [
+      "Graph instances belonging to the scale_free family, characterized by size nodes 100-300 at density 0.09, with high degree variance and moderate clustering.",
+      "Distribution of scale_free network instances having nodes 100-300 and density 0.09. The topology exhibits high degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-300, density 0.09, high degree variance, and moderate clustering, generated via scale_free structure."
+    ]
+  },
+  "plc_m5_p0.5_n100-200": {
+    "family_id": "plc_m5_p0.5_n100-200",
+    "structure_type": "scale_free",
+    "card": "scale-free, nodes 100-200, density 0.07, high degree variance, high clustering",
+    "card_detailed": "scale-free, nodes 100-200, density 0.07, high degree variance, high clustering, generator: Holme-Kim powerlaw-cluster graph with m=5 edges added per step and triangle probability p=0.5",
+    "paraphrases": [
+      "Graph instances belonging to the scale_free family, characterized by size nodes 100-200 at density 0.07, with high degree variance and high clustering.",
+      "Distribution of scale_free network instances having nodes 100-200 and density 0.07. The topology exhibits high degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.07, high degree variance, and high clustering, generated via scale_free structure."
+    ]
+  },
+  "sbm_k4_in0.5_out0.05_n100-200": {
+    "family_id": "sbm_k4_in0.5_out0.05_n100-200",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 100-200, density 0.16, low degree variance, moderate clustering",
+    "card_detailed": "planted partition communities, nodes 100-200, density 0.16, low degree variance, moderate clustering, generator: stochastic block model with k=4 communities, intra-community edge prob p_in=0.5, and inter-community edge prob p_out=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 100-200 at density 0.16, with low degree variance and moderate clustering.",
+      "Distribution of planted_partition network instances having nodes 100-200 and density 0.16. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.16, low degree variance, and moderate clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k8_in0.6_out0.10_n150-250": {
+    "family_id": "sbm_k8_in0.6_out0.10_n150-250",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 150-250, density 0.16, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 150-250, density 0.16, low degree variance, low clustering, generator: stochastic block model with k=8 communities, intra-community edge prob p_in=0.6, and inter-community edge prob p_out=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 150-250 at density 0.16, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 150-250 and density 0.16. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 150-250, density 0.16, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k5_in0.3_out0.15_n100-200": {
+    "family_id": "sbm_k5_in0.3_out0.15_n100-200",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 100-200, density 0.18, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 100-200, density 0.18, low degree variance, low clustering, generator: stochastic block model with k=5 communities, intra-community edge prob p_in=0.3, and inter-community edge prob p_out=0.15",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 100-200 at density 0.18, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 100-200 and density 0.18. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.18, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "ws_k10_p0.1_n100-200": {
+    "family_id": "ws_k10_p0.1_n100-200",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 100-200, density 0.07, low degree variance, high clustering",
+    "card_detailed": "small-world, nodes 100-200, density 0.07, low degree variance, high clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=10 and rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 100-200 at density 0.07, with low degree variance and high clustering.",
+      "Distribution of small_world network instances having nodes 100-200 and density 0.07. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.07, low degree variance, and high clustering, generated via small_world structure."
+    ]
+  },
+  "ws_k20_p0.3_n100-200": {
+    "family_id": "ws_k20_p0.3_n100-200",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 100-200, density 0.16, low degree variance, moderate clustering",
+    "card_detailed": "small-world, nodes 100-200, density 0.16, low degree variance, moderate clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=20 and rewiring probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 100-200 at density 0.16, with low degree variance and moderate clustering.",
+      "Distribution of small_world network instances having nodes 100-200 and density 0.16. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.16, low degree variance, and moderate clustering, generated via small_world structure."
+    ]
+  },
+  "cave_k20_p0.2_n100-200": {
+    "family_id": "cave_k20_p0.2_n100-200",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 100-200, density 0.14, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 100-200, density 0.14, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=20 and inter-clique rewiring probability p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 100-200 at density 0.14, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 100-200 and density 0.14. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.14, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "interval_L0.10_n100-200": {
+    "family_id": "interval_L0.10_n100-200",
+    "structure_type": "interval",
+    "card": "interval, nodes 100-200, density 0.18, medium degree variance, high clustering",
+    "card_detailed": "interval, nodes 100-200, density 0.18, medium degree variance, high clustering, generator: 1D random interval graph with maximum interval half-length L=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the interval family, characterized by size nodes 100-200 at density 0.18, with medium degree variance and high clustering.",
+      "Distribution of interval network instances having nodes 100-200 and density 0.18. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.18, medium degree variance, and high clustering, generated via interval structure."
+    ]
+  },
+  "interval_L0.20_n100-200": {
+    "family_id": "interval_L0.20_n100-200",
+    "structure_type": "interval",
+    "card": "interval, nodes 100-200, density 0.35, medium degree variance, moderate clustering",
+    "card_detailed": "interval, nodes 100-200, density 0.35, medium degree variance, moderate clustering, generator: 1D random interval graph with maximum interval half-length L=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the interval family, characterized by size nodes 100-200 at density 0.35, with medium degree variance and moderate clustering.",
+      "Distribution of interval network instances having nodes 100-200 and density 0.35. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.35, medium degree variance, and moderate clustering, generated via interval structure."
+    ]
+  },
+  "queen_n49-121": {
+    "family_id": "queen_n49-121",
+    "structure_type": "queen",
+    "card": "queen-grid-like, nodes 49-121, density 0.31, low degree variance, low clustering",
+    "card_detailed": "queen-grid-like, nodes 49-121, density 0.31, low degree variance, low clustering, generator: queen graph on full k x k board with all squares present (keep=1.0)",
+    "paraphrases": [
+      "Graph instances belonging to the queen family, characterized by size nodes 49-121 at density 0.31, with low degree variance and low clustering.",
+      "Distribution of queen network instances having nodes 49-121 and density 0.31. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 49-121, density 0.31, low degree variance, and low clustering, generated via queen structure."
+    ]
+  },
+  "queen_n100-200": {
+    "family_id": "queen_n100-200",
+    "structure_type": "queen",
+    "card": "queen-grid-like, nodes 100-200, density 0.25, low degree variance, low clustering",
+    "card_detailed": "queen-grid-like, nodes 100-200, density 0.25, low degree variance, low clustering, generator: queen graph on full k x k board with all squares present (keep=1.0)",
+    "paraphrases": [
+      "Graph instances belonging to the queen family, characterized by size nodes 100-200 at density 0.25, with low degree variance and low clustering.",
+      "Distribution of queen network instances having nodes 100-200 and density 0.25. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.25, low degree variance, and low clustering, generated via queen structure."
+    ]
+  },
+  "myciel_t1_p0.2_n100-200": {
+    "family_id": "myciel_t1_p0.2_n100-200",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 100-200, density 0.15, medium degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 100-200, density 0.15, medium degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.2) over t=1 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 100-200 at density 0.15, with medium degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 100-200 and density 0.15. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.15, medium degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t2_p0.1_n100-200": {
+    "family_id": "myciel_t2_p0.1_n100-200",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 100-200, density 0.07, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 100-200, density 0.07, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.1) over t=2 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 100-200 at density 0.07, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 100-200 and density 0.07. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.07, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "kpart_k10_p0.3_n100-200": {
+    "family_id": "kpart_k10_p0.3_n100-200",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 100-200, density 0.27, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 100-200, density 0.27, low degree variance, low clustering, generator: equipartite k-partite graph with k=10 balanced partitions and cross-partition edge prob p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 100-200 at density 0.27, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 100-200 and density 0.27. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.27, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k20_p0.5_n150-250": {
+    "family_id": "kpart_k20_p0.5_n150-250",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 150-250, density 0.48, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 150-250, density 0.48, low degree variance, low clustering, generator: equipartite k-partite graph with k=20 balanced partitions and cross-partition edge prob p=0.5",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 150-250 at density 0.48, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 150-250 and density 0.48. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 150-250, density 0.48, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "gnp_d0.05_n100-200": {
+    "family_id": "gnp_d0.05_n100-200",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 100-200, density 0.05, medium degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 100-200, density 0.05, medium degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 100-200 at density 0.05, with medium degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 100-200 and density 0.05. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.05, medium degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.10_n50-100": {
+    "family_id": "gnp_d0.10_n50-100",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 50-100, density 0.10, medium degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 50-100, density 0.10, medium degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 50-100 at density 0.10, with medium degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 50-100 and density 0.10. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 50-100, density 0.10, medium degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.10_n200-300": {
+    "family_id": "gnp_d0.10_n200-300",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 200-300, density 0.10, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 200-300, density 0.10, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 200-300 at density 0.10, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 200-300 and density 0.10. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.10, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.15_n100-200": {
+    "family_id": "gnp_d0.15_n100-200",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 100-200, density 0.15, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 100-200, density 0.15, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.15",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 100-200 at density 0.15, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 100-200 and density 0.15. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.15, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.20_n100-200": {
+    "family_id": "gnp_d0.20_n100-200",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 100-200, density 0.20, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 100-200, density 0.20, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 100-200 at density 0.20, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 100-200 and density 0.20. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.20, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.20_n200-300": {
+    "family_id": "gnp_d0.20_n200-300",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 200-300, density 0.20, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 200-300, density 0.20, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 200-300 at density 0.20, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 200-300 and density 0.20. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.20, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.30_n50-100": {
+    "family_id": "gnp_d0.30_n50-100",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 50-100, density 0.29, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 50-100, density 0.29, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 50-100 at density 0.29, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 50-100 and density 0.29. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 50-100, density 0.29, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.30_n200-300": {
+    "family_id": "gnp_d0.30_n200-300",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 200-300, density 0.30, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 200-300, density 0.30, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 200-300 at density 0.30, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 200-300 and density 0.30. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.30, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.40_n100-200": {
+    "family_id": "gnp_d0.40_n100-200",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 100-200, density 0.40, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 100-200, density 0.40, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.4",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 100-200 at density 0.40, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 100-200 and density 0.40. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.40, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.50_n100-200": {
+    "family_id": "gnp_d0.50_n100-200",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 100-200, density 0.50, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 100-200, density 0.50, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.5",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 100-200 at density 0.50, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 100-200 and density 0.50. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.50, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.70_n50-100": {
+    "family_id": "gnp_d0.70_n50-100",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 50-100, density 0.70, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 50-100, density 0.70, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.7",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 50-100 at density 0.70, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 50-100 and density 0.70. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 50-100, density 0.70, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.05_n320-500": {
+    "family_id": "gnp_d0.05_n320-500",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 320-500, density 0.05, medium degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 320-500, density 0.05, medium degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 320-500 at density 0.05, with medium degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 320-500 and density 0.05. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.05, medium degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.10_n320-500": {
+    "family_id": "gnp_d0.10_n320-500",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 320-500, density 0.10, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 320-500, density 0.10, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 320-500 at density 0.10, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 320-500 and density 0.10. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.10, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "gnp_d0.30_n320-500": {
+    "family_id": "gnp_d0.30_n320-500",
+    "structure_type": "gnp",
+    "card": "random (Erdos-Renyi), nodes 320-500, density 0.30, low degree variance, low clustering",
+    "card_detailed": "random (Erdos-Renyi), nodes 320-500, density 0.30, low degree variance, low clustering, generator: Erdos-Renyi G(n, p) with edge probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the gnp family, characterized by size nodes 320-500 at density 0.30, with low degree variance and low clustering.",
+      "Distribution of gnp network instances having nodes 320-500 and density 0.30. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.30, low degree variance, and low clustering, generated via gnp structure."
+    ]
+  },
+  "sbm_k3_in0.5_out0.05_n100-200": {
+    "family_id": "sbm_k3_in0.5_out0.05_n100-200",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 100-200, density 0.20, low degree variance, moderate clustering",
+    "card_detailed": "planted partition communities, nodes 100-200, density 0.20, low degree variance, moderate clustering, generator: stochastic block model with k=3 communities, intra-community edge prob p_in=0.5, and inter-community edge prob p_out=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 100-200 at density 0.20, with low degree variance and moderate clustering.",
+      "Distribution of planted_partition network instances having nodes 100-200 and density 0.20. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.20, low degree variance, and moderate clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k4_in0.7_out0.10_n50-100": {
+    "family_id": "sbm_k4_in0.7_out0.10_n50-100",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 50-100, density 0.24, low degree variance, moderate clustering",
+    "card_detailed": "planted partition communities, nodes 50-100, density 0.24, low degree variance, moderate clustering, generator: stochastic block model with k=4 communities, intra-community edge prob p_in=0.7, and inter-community edge prob p_out=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 50-100 at density 0.24, with low degree variance and moderate clustering.",
+      "Distribution of planted_partition network instances having nodes 50-100 and density 0.24. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 50-100, density 0.24, low degree variance, and moderate clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k6_in0.4_out0.05_n100-200": {
+    "family_id": "sbm_k6_in0.4_out0.05_n100-200",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 100-200, density 0.11, medium degree variance, moderate clustering",
+    "card_detailed": "planted partition communities, nodes 100-200, density 0.11, medium degree variance, moderate clustering, generator: stochastic block model with k=6 communities, intra-community edge prob p_in=0.4, and inter-community edge prob p_out=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 100-200 at density 0.11, with medium degree variance and moderate clustering.",
+      "Distribution of planted_partition network instances having nodes 100-200 and density 0.11. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.11, medium degree variance, and moderate clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k6_in0.6_out0.10_n200-300": {
+    "family_id": "sbm_k6_in0.6_out0.10_n200-300",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 200-300, density 0.18, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 200-300, density 0.18, low degree variance, low clustering, generator: stochastic block model with k=6 communities, intra-community edge prob p_in=0.6, and inter-community edge prob p_out=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 200-300 at density 0.18, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 200-300 and density 0.18. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.18, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k8_in0.6_out0.10_n200-300": {
+    "family_id": "sbm_k8_in0.6_out0.10_n200-300",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 200-300, density 0.16, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 200-300, density 0.16, low degree variance, low clustering, generator: stochastic block model with k=8 communities, intra-community edge prob p_in=0.6, and inter-community edge prob p_out=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 200-300 at density 0.16, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 200-300 and density 0.16. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.16, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k8_in0.3_out0.10_n100-200": {
+    "family_id": "sbm_k8_in0.3_out0.10_n100-200",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 100-200, density 0.12, medium degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 100-200, density 0.12, medium degree variance, low clustering, generator: stochastic block model with k=8 communities, intra-community edge prob p_in=0.3, and inter-community edge prob p_out=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 100-200 at density 0.12, with medium degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 100-200 and density 0.12. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.12, medium degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k10_in0.5_out0.05_n200-300": {
+    "family_id": "sbm_k10_in0.5_out0.05_n200-300",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 200-300, density 0.09, low degree variance, moderate clustering",
+    "card_detailed": "planted partition communities, nodes 200-300, density 0.09, low degree variance, moderate clustering, generator: stochastic block model with k=10 communities, intra-community edge prob p_in=0.5, and inter-community edge prob p_out=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 200-300 at density 0.09, with low degree variance and moderate clustering.",
+      "Distribution of planted_partition network instances having nodes 200-300 and density 0.09. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.09, low degree variance, and moderate clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k10_in0.7_out0.20_n200-300": {
+    "family_id": "sbm_k10_in0.7_out0.20_n200-300",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 200-300, density 0.25, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 200-300, density 0.25, low degree variance, low clustering, generator: stochastic block model with k=10 communities, intra-community edge prob p_in=0.7, and inter-community edge prob p_out=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 200-300 at density 0.25, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 200-300 and density 0.25. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.25, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k12_in0.5_out0.10_n200-300": {
+    "family_id": "sbm_k12_in0.5_out0.10_n200-300",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 200-300, density 0.13, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 200-300, density 0.13, low degree variance, low clustering, generator: stochastic block model with k=12 communities, intra-community edge prob p_in=0.5, and inter-community edge prob p_out=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 200-300 at density 0.13, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 200-300 and density 0.13. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.13, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k6_in0.8_out0.05_n50-100": {
+    "family_id": "sbm_k6_in0.8_out0.05_n50-100",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 50-100, density 0.17, low degree variance, moderate clustering",
+    "card_detailed": "planted partition communities, nodes 50-100, density 0.17, low degree variance, moderate clustering, generator: stochastic block model with k=6 communities, intra-community edge prob p_in=0.8, and inter-community edge prob p_out=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 50-100 at density 0.17, with low degree variance and moderate clustering.",
+      "Distribution of planted_partition network instances having nodes 50-100 and density 0.17. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 50-100, density 0.17, low degree variance, and moderate clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k4_in0.5_out0.05_n320-500": {
+    "family_id": "sbm_k4_in0.5_out0.05_n320-500",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 320-500, density 0.16, low degree variance, moderate clustering",
+    "card_detailed": "planted partition communities, nodes 320-500, density 0.16, low degree variance, moderate clustering, generator: stochastic block model with k=4 communities, intra-community edge prob p_in=0.5, and inter-community edge prob p_out=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 320-500 at density 0.16, with low degree variance and moderate clustering.",
+      "Distribution of planted_partition network instances having nodes 320-500 and density 0.16. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 320-500, density 0.16, low degree variance, and moderate clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k8_in0.6_out0.10_n320-500": {
+    "family_id": "sbm_k8_in0.6_out0.10_n320-500",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 320-500, density 0.16, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 320-500, density 0.16, low degree variance, low clustering, generator: stochastic block model with k=8 communities, intra-community edge prob p_in=0.6, and inter-community edge prob p_out=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 320-500 at density 0.16, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 320-500 and density 0.16. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.16, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "sbm_k5_in0.3_out0.15_n320-500": {
+    "family_id": "sbm_k5_in0.3_out0.15_n320-500",
+    "structure_type": "planted_partition",
+    "card": "planted partition communities, nodes 320-500, density 0.18, low degree variance, low clustering",
+    "card_detailed": "planted partition communities, nodes 320-500, density 0.18, low degree variance, low clustering, generator: stochastic block model with k=5 communities, intra-community edge prob p_in=0.3, and inter-community edge prob p_out=0.15",
+    "paraphrases": [
+      "Graph instances belonging to the planted_partition family, characterized by size nodes 320-500 at density 0.18, with low degree variance and low clustering.",
+      "Distribution of planted_partition network instances having nodes 320-500 and density 0.18. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.18, low degree variance, and low clustering, generated via planted_partition structure."
+    ]
+  },
+  "ws_k6_p0.05_n100-200": {
+    "family_id": "ws_k6_p0.05_n100-200",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 100-200, density 0.05, low degree variance, high clustering",
+    "card_detailed": "small-world, nodes 100-200, density 0.05, low degree variance, high clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=6 and rewiring probability p=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 100-200 at density 0.05, with low degree variance and high clustering.",
+      "Distribution of small_world network instances having nodes 100-200 and density 0.05. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.05, low degree variance, and high clustering, generated via small_world structure."
+    ]
+  },
+  "ws_k10_p0.3_n50-100": {
+    "family_id": "ws_k10_p0.3_n50-100",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 50-100, density 0.14, low degree variance, moderate clustering",
+    "card_detailed": "small-world, nodes 50-100, density 0.14, low degree variance, moderate clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=10 and rewiring probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 50-100 at density 0.14, with low degree variance and moderate clustering.",
+      "Distribution of small_world network instances having nodes 50-100 and density 0.14. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 50-100, density 0.14, low degree variance, and moderate clustering, generated via small_world structure."
+    ]
+  },
+  "ws_k16_p0.1_n200-300": {
+    "family_id": "ws_k16_p0.1_n200-300",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 200-300, density 0.06, low degree variance, high clustering",
+    "card_detailed": "small-world, nodes 200-300, density 0.06, low degree variance, high clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=16 and rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 200-300 at density 0.06, with low degree variance and high clustering.",
+      "Distribution of small_world network instances having nodes 200-300 and density 0.06. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 200-300, density 0.06, low degree variance, and high clustering, generated via small_world structure."
+    ]
+  },
+  "ws_k30_p0.2_n200-300": {
+    "family_id": "ws_k30_p0.2_n200-300",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 200-300, density 0.12, low degree variance, moderate clustering",
+    "card_detailed": "small-world, nodes 200-300, density 0.12, low degree variance, moderate clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=30 and rewiring probability p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 200-300 at density 0.12, with low degree variance and moderate clustering.",
+      "Distribution of small_world network instances having nodes 200-300 and density 0.12. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.12, low degree variance, and moderate clustering, generated via small_world structure."
+    ]
+  },
+  "ws_k8_p0.5_n50-100": {
+    "family_id": "ws_k8_p0.5_n50-100",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 50-100, density 0.11, medium degree variance, low clustering",
+    "card_detailed": "small-world, nodes 50-100, density 0.11, medium degree variance, low clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=8 and rewiring probability p=0.5",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 50-100 at density 0.11, with medium degree variance and low clustering.",
+      "Distribution of small_world network instances having nodes 50-100 and density 0.11. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 50-100, density 0.11, medium degree variance, and low clustering, generated via small_world structure."
+    ]
+  },
+  "ws_k10_p0.1_n320-500": {
+    "family_id": "ws_k10_p0.1_n320-500",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 320-500, density 0.02, low degree variance, high clustering",
+    "card_detailed": "small-world, nodes 320-500, density 0.02, low degree variance, high clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=10 and rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 320-500 at density 0.02, with low degree variance and high clustering.",
+      "Distribution of small_world network instances having nodes 320-500 and density 0.02. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 320-500, density 0.02, low degree variance, and high clustering, generated via small_world structure."
+    ]
+  },
+  "ws_k20_p0.3_n320-500": {
+    "family_id": "ws_k20_p0.3_n320-500",
+    "structure_type": "small_world",
+    "card": "small-world, nodes 320-500, density 0.05, low degree variance, high clustering",
+    "card_detailed": "small-world, nodes 320-500, density 0.05, low degree variance, high clustering, generator: Watts-Strogatz small-world graph with initial ring degree k=20 and rewiring probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the small_world family, characterized by size nodes 320-500 at density 0.05, with low degree variance and high clustering.",
+      "Distribution of small_world network instances having nodes 320-500 and density 0.05. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 320-500, density 0.05, low degree variance, and high clustering, generated via small_world structure."
+    ]
+  },
+  "cave_k8_p0.1_n100-200": {
+    "family_id": "cave_k8_p0.1_n100-200",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 100-200, density 0.06, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 100-200, density 0.06, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=8 and inter-clique rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 100-200 at density 0.06, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 100-200 and density 0.06. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.06, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "cave_k10_p0.1_n200-300": {
+    "family_id": "cave_k10_p0.1_n200-300",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 200-300, density 0.04, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 200-300, density 0.04, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=10 and inter-clique rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 200-300 at density 0.04, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 200-300 and density 0.04. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 200-300, density 0.04, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "cave_k10_p0.3_n100-200": {
+    "family_id": "cave_k10_p0.3_n100-200",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 100-200, density 0.06, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 100-200, density 0.06, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=10 and inter-clique rewiring probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 100-200 at density 0.06, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 100-200 and density 0.06. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.06, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "cave_k15_p0.1_n100-200": {
+    "family_id": "cave_k15_p0.1_n100-200",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 100-200, density 0.10, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 100-200, density 0.10, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=15 and inter-clique rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 100-200 at density 0.10, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 100-200 and density 0.10. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.10, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "cave_k20_p0.2_n200-300": {
+    "family_id": "cave_k20_p0.2_n200-300",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 200-300, density 0.08, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 200-300, density 0.08, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=20 and inter-clique rewiring probability p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 200-300 at density 0.08, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 200-300 and density 0.08. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 200-300, density 0.08, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "cave_k30_p0.1_n200-300": {
+    "family_id": "cave_k30_p0.1_n200-300",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 200-300, density 0.13, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 200-300, density 0.13, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=30 and inter-clique rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 200-300 at density 0.13, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 200-300 and density 0.13. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 200-300, density 0.13, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "cave_k10_p0.1_n320-500": {
+    "family_id": "cave_k10_p0.1_n320-500",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 320-500, density 0.02, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 320-500, density 0.02, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=10 and inter-clique rewiring probability p=0.1",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 320-500 at density 0.02, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 320-500 and density 0.02. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 320-500, density 0.02, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "cave_k20_p0.2_n320-500": {
+    "family_id": "cave_k20_p0.2_n320-500",
+    "structure_type": "caveman",
+    "card": "clustered cliques, nodes 320-500, density 0.05, low degree variance, high clustering",
+    "card_detailed": "clustered cliques, nodes 320-500, density 0.05, low degree variance, high clustering, generator: relaxed caveman graph with clique size k=20 and inter-clique rewiring probability p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the caveman family, characterized by size nodes 320-500 at density 0.05, with low degree variance and high clustering.",
+      "Distribution of caveman network instances having nodes 320-500 and density 0.05. The topology exhibits low degree variance alongside high clustering.",
+      "Network ensemble with nodes 320-500, density 0.05, low degree variance, and high clustering, generated via caveman structure."
+    ]
+  },
+  "interval_L0.03_n100-200": {
+    "family_id": "interval_L0.03_n100-200",
+    "structure_type": "interval",
+    "card": "interval, nodes 100-200, density 0.06, medium degree variance, high clustering",
+    "card_detailed": "interval, nodes 100-200, density 0.06, medium degree variance, high clustering, generator: 1D random interval graph with maximum interval half-length L=0.03",
+    "paraphrases": [
+      "Graph instances belonging to the interval family, characterized by size nodes 100-200 at density 0.06, with medium degree variance and high clustering.",
+      "Distribution of interval network instances having nodes 100-200 and density 0.06. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.06, medium degree variance, and high clustering, generated via interval structure."
+    ]
+  },
+  "interval_L0.05_n200-300": {
+    "family_id": "interval_L0.05_n200-300",
+    "structure_type": "interval",
+    "card": "interval, nodes 200-300, density 0.10, medium degree variance, high clustering",
+    "card_detailed": "interval, nodes 200-300, density 0.10, medium degree variance, high clustering, generator: 1D random interval graph with maximum interval half-length L=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the interval family, characterized by size nodes 200-300 at density 0.10, with medium degree variance and high clustering.",
+      "Distribution of interval network instances having nodes 200-300 and density 0.10. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 200-300, density 0.10, medium degree variance, and high clustering, generated via interval structure."
+    ]
+  },
+  "interval_L0.15_n50-100": {
+    "family_id": "interval_L0.15_n50-100",
+    "structure_type": "interval",
+    "card": "interval, nodes 50-100, density 0.26, medium degree variance, moderate clustering",
+    "card_detailed": "interval, nodes 50-100, density 0.26, medium degree variance, moderate clustering, generator: 1D random interval graph with maximum interval half-length L=0.15",
+    "paraphrases": [
+      "Graph instances belonging to the interval family, characterized by size nodes 50-100 at density 0.26, with medium degree variance and moderate clustering.",
+      "Distribution of interval network instances having nodes 50-100 and density 0.26. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 50-100, density 0.26, medium degree variance, and moderate clustering, generated via interval structure."
+    ]
+  },
+  "interval_L0.20_n50-100": {
+    "family_id": "interval_L0.20_n50-100",
+    "structure_type": "interval",
+    "card": "interval, nodes 50-100, density 0.37, medium degree variance, moderate clustering",
+    "card_detailed": "interval, nodes 50-100, density 0.37, medium degree variance, moderate clustering, generator: 1D random interval graph with maximum interval half-length L=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the interval family, characterized by size nodes 50-100 at density 0.37, with medium degree variance and moderate clustering.",
+      "Distribution of interval network instances having nodes 50-100 and density 0.37. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 50-100, density 0.37, medium degree variance, and moderate clustering, generated via interval structure."
+    ]
+  },
+  "interval_L0.05_n320-500": {
+    "family_id": "interval_L0.05_n320-500",
+    "structure_type": "interval",
+    "card": "interval, nodes 320-500, density 0.10, medium degree variance, high clustering",
+    "card_detailed": "interval, nodes 320-500, density 0.10, medium degree variance, high clustering, generator: 1D random interval graph with maximum interval half-length L=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the interval family, characterized by size nodes 320-500 at density 0.10, with medium degree variance and high clustering.",
+      "Distribution of interval network instances having nodes 320-500 and density 0.10. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 320-500, density 0.10, medium degree variance, and high clustering, generated via interval structure."
+    ]
+  },
+  "myciel_t1_p0.1_n100-200": {
+    "family_id": "myciel_t1_p0.1_n100-200",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 100-200, density 0.08, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 100-200, density 0.08, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.1) over t=1 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 100-200 at density 0.08, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 100-200 and density 0.08. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.08, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t1_p0.3_n50-100": {
+    "family_id": "myciel_t1_p0.3_n50-100",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 50-100, density 0.22, medium degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 50-100, density 0.22, medium degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.3) over t=1 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 50-100 at density 0.22, with medium degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 50-100 and density 0.22. The topology exhibits medium degree variance alongside low clustering.",
+      "Network ensemble with nodes 50-100, density 0.22, medium degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t2_p0.05_n100-200": {
+    "family_id": "myciel_t2_p0.05_n100-200",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 100-200, density 0.04, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 100-200, density 0.04, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.05) over t=2 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 100-200 at density 0.04, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 100-200 and density 0.04. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.04, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t2_p0.2_n200-300": {
+    "family_id": "myciel_t2_p0.2_n200-300",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 200-300, density 0.11, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 200-300, density 0.11, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.2) over t=2 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 200-300 at density 0.11, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 200-300 and density 0.11. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.11, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t3_p0.05_n100-200": {
+    "family_id": "myciel_t3_p0.05_n100-200",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 100-200, density 0.05, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 100-200, density 0.05, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.05) over t=3 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 100-200 at density 0.05, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 100-200 and density 0.05. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.05, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t3_p0.1_n200-300": {
+    "family_id": "myciel_t3_p0.1_n200-300",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 200-300, density 0.06, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 200-300, density 0.06, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.1) over t=3 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 200-300 at density 0.06, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 200-300 and density 0.06. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.06, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t2_p0.1_n320-500": {
+    "family_id": "myciel_t2_p0.1_n320-500",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 320-500, density 0.06, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 320-500, density 0.06, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.1) over t=2 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 320-500 at density 0.06, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 320-500 and density 0.06. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.06, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "myciel_t3_p0.05_n320-500": {
+    "family_id": "myciel_t3_p0.05_n320-500",
+    "structure_type": "mycielski",
+    "card": "Mycielski construction, nodes 320-500, density 0.03, high degree variance, low clustering",
+    "card_detailed": "Mycielski construction, nodes 320-500, density 0.03, high degree variance, low clustering, generator: Mycielskian graph constructed from base G(n0, p=0.05) over t=3 iterations",
+    "paraphrases": [
+      "Graph instances belonging to the mycielski family, characterized by size nodes 320-500 at density 0.03, with high degree variance and low clustering.",
+      "Distribution of mycielski network instances having nodes 320-500 and density 0.03. The topology exhibits high degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.03, high degree variance, and low clustering, generated via mycielski structure."
+    ]
+  },
+  "kpart_k8_p0.3_n100-200": {
+    "family_id": "kpart_k8_p0.3_n100-200",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 100-200, density 0.26, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 100-200, density 0.26, low degree variance, low clustering, generator: equipartite k-partite graph with k=8 balanced partitions and cross-partition edge prob p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 100-200 at density 0.26, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 100-200 and density 0.26. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.26, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k10_p0.6_n200-300": {
+    "family_id": "kpart_k10_p0.6_n200-300",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 200-300, density 0.54, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 200-300, density 0.54, low degree variance, low clustering, generator: equipartite k-partite graph with k=10 balanced partitions and cross-partition edge prob p=0.6",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 200-300 at density 0.54, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 200-300 and density 0.54. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.54, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k15_p0.4_n200-300": {
+    "family_id": "kpart_k15_p0.4_n200-300",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 200-300, density 0.38, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 200-300, density 0.38, low degree variance, low clustering, generator: equipartite k-partite graph with k=15 balanced partitions and cross-partition edge prob p=0.4",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 200-300 at density 0.38, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 200-300 and density 0.38. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.38, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k20_p0.5_n200-300": {
+    "family_id": "kpart_k20_p0.5_n200-300",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 200-300, density 0.48, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 200-300, density 0.48, low degree variance, low clustering, generator: equipartite k-partite graph with k=20 balanced partitions and cross-partition edge prob p=0.5",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 200-300 at density 0.48, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 200-300 and density 0.48. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.48, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k30_p0.5_n200-300": {
+    "family_id": "kpart_k30_p0.5_n200-300",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 200-300, density 0.48, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 200-300, density 0.48, low degree variance, low clustering, generator: equipartite k-partite graph with k=30 balanced partitions and cross-partition edge prob p=0.5",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 200-300 at density 0.48, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 200-300 and density 0.48. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.48, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k12_p0.15_n100-200": {
+    "family_id": "kpart_k12_p0.15_n100-200",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 100-200, density 0.14, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 100-200, density 0.14, low degree variance, low clustering, generator: equipartite k-partite graph with k=12 balanced partitions and cross-partition edge prob p=0.15",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 100-200 at density 0.14, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 100-200 and density 0.14. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 100-200, density 0.14, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k20_p0.2_n200-300": {
+    "family_id": "kpart_k20_p0.2_n200-300",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 200-300, density 0.19, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 200-300, density 0.19, low degree variance, low clustering, generator: equipartite k-partite graph with k=20 balanced partitions and cross-partition edge prob p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 200-300 at density 0.19, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 200-300 and density 0.19. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 200-300, density 0.19, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k10_p0.3_n320-500": {
+    "family_id": "kpart_k10_p0.3_n320-500",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 320-500, density 0.27, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 320-500, density 0.27, low degree variance, low clustering, generator: equipartite k-partite graph with k=10 balanced partitions and cross-partition edge prob p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 320-500 at density 0.27, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 320-500 and density 0.27. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.27, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "kpart_k20_p0.2_n320-500": {
+    "family_id": "kpart_k20_p0.2_n320-500",
+    "structure_type": "equipartite",
+    "card": "hidden k-partite (equipartite), nodes 320-500, density 0.19, low degree variance, low clustering",
+    "card_detailed": "hidden k-partite (equipartite), nodes 320-500, density 0.19, low degree variance, low clustering, generator: equipartite k-partite graph with k=20 balanced partitions and cross-partition edge prob p=0.2",
+    "paraphrases": [
+      "Graph instances belonging to the equipartite family, characterized by size nodes 320-500 at density 0.19, with low degree variance and low clustering.",
+      "Distribution of equipartite network instances having nodes 320-500 and density 0.19. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 320-500, density 0.19, low degree variance, and low clustering, generated via equipartite structure."
+    ]
+  },
+  "geo_r0.08_n200-300": {
+    "family_id": "geo_r0.08_n200-300",
+    "structure_type": "geometric",
+    "card": "random geometric, nodes 200-300, density 0.02, medium degree variance, high clustering",
+    "card_detailed": "random geometric, nodes 200-300, density 0.02, medium degree variance, high clustering, generator: 2D random geometric graph with connection radius r=0.08",
+    "paraphrases": [
+      "Graph instances belonging to the geometric family, characterized by size nodes 200-300 at density 0.02, with medium degree variance and high clustering.",
+      "Distribution of geometric network instances having nodes 200-300 and density 0.02. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 200-300, density 0.02, medium degree variance, and high clustering, generated via geometric structure."
+    ]
+  },
+  "geo_r0.12_n100-200": {
+    "family_id": "geo_r0.12_n100-200",
+    "structure_type": "geometric",
+    "card": "random geometric, nodes 100-200, density 0.04, medium degree variance, high clustering",
+    "card_detailed": "random geometric, nodes 100-200, density 0.04, medium degree variance, high clustering, generator: 2D random geometric graph with connection radius r=0.12",
+    "paraphrases": [
+      "Graph instances belonging to the geometric family, characterized by size nodes 100-200 at density 0.04, with medium degree variance and high clustering.",
+      "Distribution of geometric network instances having nodes 100-200 and density 0.04. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.04, medium degree variance, and high clustering, generated via geometric structure."
+    ]
+  },
+  "geo_r0.20_n100-200": {
+    "family_id": "geo_r0.20_n100-200",
+    "structure_type": "geometric",
+    "card": "random geometric, nodes 100-200, density 0.10, medium degree variance, high clustering",
+    "card_detailed": "random geometric, nodes 100-200, density 0.10, medium degree variance, high clustering, generator: 2D random geometric graph with connection radius r=0.20",
+    "paraphrases": [
+      "Graph instances belonging to the geometric family, characterized by size nodes 100-200 at density 0.10, with medium degree variance and high clustering.",
+      "Distribution of geometric network instances having nodes 100-200 and density 0.10. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.10, medium degree variance, and high clustering, generated via geometric structure."
+    ]
+  },
+  "geo_r0.25_n50-100": {
+    "family_id": "geo_r0.25_n50-100",
+    "structure_type": "geometric",
+    "card": "random geometric, nodes 50-100, density 0.15, medium degree variance, high clustering",
+    "card_detailed": "random geometric, nodes 50-100, density 0.15, medium degree variance, high clustering, generator: 2D random geometric graph with connection radius r=0.25",
+    "paraphrases": [
+      "Graph instances belonging to the geometric family, characterized by size nodes 50-100 at density 0.15, with medium degree variance and high clustering.",
+      "Distribution of geometric network instances having nodes 50-100 and density 0.15. The topology exhibits medium degree variance alongside high clustering.",
+      "Network ensemble with nodes 50-100, density 0.15, medium degree variance, and high clustering, generated via geometric structure."
+    ]
+  },
+  "geo_r0.35_n50-100": {
+    "family_id": "geo_r0.35_n50-100",
+    "structure_type": "geometric",
+    "card": "random geometric, nodes 50-100, density 0.28, medium degree variance, moderate clustering",
+    "card_detailed": "random geometric, nodes 50-100, density 0.28, medium degree variance, moderate clustering, generator: 2D random geometric graph with connection radius r=0.35",
+    "paraphrases": [
+      "Graph instances belonging to the geometric family, characterized by size nodes 50-100 at density 0.28, with medium degree variance and moderate clustering.",
+      "Distribution of geometric network instances having nodes 50-100 and density 0.28. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 50-100, density 0.28, medium degree variance, and moderate clustering, generated via geometric structure."
+    ]
+  },
+  "hyb_r0.15_q0.05_n100-200": {
+    "family_id": "hyb_r0.15_q0.05_n100-200",
+    "structure_type": "hybrid_geometric",
+    "card": "geometric plus random edges, nodes 100-200, density 0.11, medium degree variance, moderate clustering",
+    "card_detailed": "geometric plus random edges, nodes 100-200, density 0.11, medium degree variance, moderate clustering, generator: hybrid 2D geometric graph with connection radius r=0.15 and random edge noise q=0.05",
+    "paraphrases": [
+      "Graph instances belonging to the hybrid_geometric family, characterized by size nodes 100-200 at density 0.11, with medium degree variance and moderate clustering.",
+      "Distribution of hybrid_geometric network instances having nodes 100-200 and density 0.11. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.11, medium degree variance, and moderate clustering, generated via hybrid_geometric structure."
+    ]
+  },
+  "hyb_r0.25_q0.10_n50-100": {
+    "family_id": "hyb_r0.25_q0.10_n50-100",
+    "structure_type": "hybrid_geometric",
+    "card": "geometric plus random edges, nodes 50-100, density 0.24, medium degree variance, moderate clustering",
+    "card_detailed": "geometric plus random edges, nodes 50-100, density 0.24, medium degree variance, moderate clustering, generator: hybrid 2D geometric graph with connection radius r=0.25 and random edge noise q=0.10",
+    "paraphrases": [
+      "Graph instances belonging to the hybrid_geometric family, characterized by size nodes 50-100 at density 0.24, with medium degree variance and moderate clustering.",
+      "Distribution of hybrid_geometric network instances having nodes 50-100 and density 0.24. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 50-100, density 0.24, medium degree variance, and moderate clustering, generated via hybrid_geometric structure."
+    ]
+  },
+  "hyb_r0.12_q0.03_n200-300": {
+    "family_id": "hyb_r0.12_q0.03_n200-300",
+    "structure_type": "hybrid_geometric",
+    "card": "geometric plus random edges, nodes 200-300, density 0.07, medium degree variance, moderate clustering",
+    "card_detailed": "geometric plus random edges, nodes 200-300, density 0.07, medium degree variance, moderate clustering, generator: hybrid 2D geometric graph with connection radius r=0.12 and random edge noise q=0.03",
+    "paraphrases": [
+      "Graph instances belonging to the hybrid_geometric family, characterized by size nodes 200-300 at density 0.07, with medium degree variance and moderate clustering.",
+      "Distribution of hybrid_geometric network instances having nodes 200-300 and density 0.07. The topology exhibits medium degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.07, medium degree variance, and moderate clustering, generated via hybrid_geometric structure."
+    ]
+  },
+  "ba_m5_n100-200": {
+    "family_id": "ba_m5_n100-200",
+    "structure_type": "scale_free",
+    "card": "scale-free, nodes 100-200, density 0.06, high degree variance, moderate clustering",
+    "card_detailed": "scale-free, nodes 100-200, density 0.06, high degree variance, moderate clustering, generator: Barabasi-Albert scale-free graph with preferential attachment m=5 edges per new vertex",
+    "paraphrases": [
+      "Graph instances belonging to the scale_free family, characterized by size nodes 100-200 at density 0.06, with high degree variance and moderate clustering.",
+      "Distribution of scale_free network instances having nodes 100-200 and density 0.06. The topology exhibits high degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.06, high degree variance, and moderate clustering, generated via scale_free structure."
+    ]
+  },
+  "ba_m8_n200-300": {
+    "family_id": "ba_m8_n200-300",
+    "structure_type": "scale_free",
+    "card": "scale-free, nodes 200-300, density 0.07, high degree variance, moderate clustering",
+    "card_detailed": "scale-free, nodes 200-300, density 0.07, high degree variance, moderate clustering, generator: Barabasi-Albert scale-free graph with preferential attachment m=8 edges per new vertex",
+    "paraphrases": [
+      "Graph instances belonging to the scale_free family, characterized by size nodes 200-300 at density 0.07, with high degree variance and moderate clustering.",
+      "Distribution of scale_free network instances having nodes 200-300 and density 0.07. The topology exhibits high degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.07, high degree variance, and moderate clustering, generated via scale_free structure."
+    ]
+  },
+  "ba_m12_n200-300": {
+    "family_id": "ba_m12_n200-300",
+    "structure_type": "scale_free",
+    "card": "scale-free, nodes 200-300, density 0.09, high degree variance, moderate clustering",
+    "card_detailed": "scale-free, nodes 200-300, density 0.09, high degree variance, moderate clustering, generator: Barabasi-Albert scale-free graph with preferential attachment m=12 edges per new vertex",
+    "paraphrases": [
+      "Graph instances belonging to the scale_free family, characterized by size nodes 200-300 at density 0.09, with high degree variance and moderate clustering.",
+      "Distribution of scale_free network instances having nodes 200-300 and density 0.09. The topology exhibits high degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.09, high degree variance, and moderate clustering, generated via scale_free structure."
+    ]
+  },
+  "plc_m3_p0.3_n100-200": {
+    "family_id": "plc_m3_p0.3_n100-200",
+    "structure_type": "scale_free",
+    "card": "scale-free, nodes 100-200, density 0.04, high degree variance, high clustering",
+    "card_detailed": "scale-free, nodes 100-200, density 0.04, high degree variance, high clustering, generator: Holme-Kim powerlaw-cluster graph with m=3 edges added per step and triangle probability p=0.3",
+    "paraphrases": [
+      "Graph instances belonging to the scale_free family, characterized by size nodes 100-200 at density 0.04, with high degree variance and high clustering.",
+      "Distribution of scale_free network instances having nodes 100-200 and density 0.04. The topology exhibits high degree variance alongside high clustering.",
+      "Network ensemble with nodes 100-200, density 0.04, high degree variance, and high clustering, generated via scale_free structure."
+    ]
+  },
+  "plc_m8_p0.7_n200-300": {
+    "family_id": "plc_m8_p0.7_n200-300",
+    "structure_type": "scale_free",
+    "card": "scale-free, nodes 200-300, density 0.06, high degree variance, high clustering",
+    "card_detailed": "scale-free, nodes 200-300, density 0.06, high degree variance, high clustering, generator: Holme-Kim powerlaw-cluster graph with m=8 edges added per step and triangle probability p=0.7",
+    "paraphrases": [
+      "Graph instances belonging to the scale_free family, characterized by size nodes 200-300 at density 0.06, with high degree variance and high clustering.",
+      "Distribution of scale_free network instances having nodes 200-300 and density 0.06. The topology exhibits high degree variance alongside high clustering.",
+      "Network ensemble with nodes 200-300, density 0.06, high degree variance, and high clustering, generated via scale_free structure."
+    ]
+  },
+  "queen_n50-100": {
+    "family_id": "queen_n50-100",
+    "structure_type": "queen",
+    "card": "queen-grid-like, nodes 50-100, density 0.34, low degree variance, low clustering",
+    "card_detailed": "queen-grid-like, nodes 50-100, density 0.34, low degree variance, low clustering, generator: queen graph on full k x k board with all squares present (keep=1.0)",
+    "paraphrases": [
+      "Graph instances belonging to the queen family, characterized by size nodes 50-100 at density 0.34, with low degree variance and low clustering.",
+      "Distribution of queen network instances having nodes 50-100 and density 0.34. The topology exhibits low degree variance alongside low clustering.",
+      "Network ensemble with nodes 50-100, density 0.34, low degree variance, and low clustering, generated via queen structure."
+    ]
+  },
+  "queen_n200-300": {
+    "family_id": "queen_n200-300",
+    "structure_type": "queen",
+    "card": "queen-grid-like, nodes 200-300, density 0.20, low degree variance, moderate clustering",
+    "card_detailed": "queen-grid-like, nodes 200-300, density 0.20, low degree variance, moderate clustering, generator: queen graph on full k x k board with all squares present (keep=1.0)",
+    "paraphrases": [
+      "Graph instances belonging to the queen family, characterized by size nodes 200-300 at density 0.20, with low degree variance and moderate clustering.",
+      "Distribution of queen network instances having nodes 200-300 and density 0.20. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.20, low degree variance, and moderate clustering, generated via queen structure."
+    ]
+  },
+  "queen_keep0.7_n100-200": {
+    "family_id": "queen_keep0.7_n100-200",
+    "structure_type": "queen",
+    "card": "queen-grid-like, nodes 100-200, density 0.20, low degree variance, moderate clustering",
+    "card_detailed": "queen-grid-like, nodes 100-200, density 0.20, low degree variance, moderate clustering, generator: queen graph on board with randomly sampled square fraction keep=0.7",
+    "paraphrases": [
+      "Graph instances belonging to the queen family, characterized by size nodes 100-200 at density 0.20, with low degree variance and moderate clustering.",
+      "Distribution of queen network instances having nodes 100-200 and density 0.20. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 100-200, density 0.20, low degree variance, and moderate clustering, generated via queen structure."
+    ]
+  },
+  "queen_keep0.7_n200-300": {
+    "family_id": "queen_keep0.7_n200-300",
+    "structure_type": "queen",
+    "card": "queen-grid-like, nodes 200-300, density 0.16, low degree variance, moderate clustering",
+    "card_detailed": "queen-grid-like, nodes 200-300, density 0.16, low degree variance, moderate clustering, generator: queen graph on board with randomly sampled square fraction keep=0.7",
+    "paraphrases": [
+      "Graph instances belonging to the queen family, characterized by size nodes 200-300 at density 0.16, with low degree variance and moderate clustering.",
+      "Distribution of queen network instances having nodes 200-300 and density 0.16. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.16, low degree variance, and moderate clustering, generated via queen structure."
+    ]
+  },
+  "queen_keep0.4_n200-300": {
+    "family_id": "queen_keep0.4_n200-300",
+    "structure_type": "queen",
+    "card": "queen-grid-like, nodes 200-300, density 0.13, low degree variance, moderate clustering",
+    "card_detailed": "queen-grid-like, nodes 200-300, density 0.13, low degree variance, moderate clustering, generator: queen graph on board with randomly sampled square fraction keep=0.4",
+    "paraphrases": [
+      "Graph instances belonging to the queen family, characterized by size nodes 200-300 at density 0.13, with low degree variance and moderate clustering.",
+      "Distribution of queen network instances having nodes 200-300 and density 0.13. The topology exhibits low degree variance alongside moderate clustering.",
+      "Network ensemble with nodes 200-300, density 0.13, low degree variance, and moderate clustering, generated via queen structure."
+    ]
+  }
+}

@@ -1,0 +1,459 @@
+[
+ {
+  "family_id": "geo_r0.10_n200-300",
+  "structure_type": "geometric",
+  "generator": "geometric",
+  "params": {
+   "radius": 0.1
+  },
+  "n_range": [
+   200,
+   300
+  ],
+  "probe_stats": {
+   "density": 0.02907343480049302,
+   "deg_cv": 0.4087825834751129,
+   "clustering": 0.6137126326560974,
+   "n": 251.8
+  },
+  "cards": {
+   "card": "random geometric, nodes 200-300, density 0.03, medium degree variance, high clustering",
+   "card_no_structure": "nodes 200-300, density 0.03, medium degree variance, high clustering",
+   "card_paraphrase_1": "random geometric; between 200 and 300 vertices; edge density about 0.03; moderately uneven degrees; strongly clustered neighborhoods",
+   "card_paraphrase_2": "Graphs of type random geometric, with 200 to 300 nodes, 3% of possible edges present, moderate spread of vertex degrees and many more triangles than a random graph.",
+   "card_paraphrase_3": "Size: 200-300 nodes. Density: 0.03. Structure: random geometric. Degrees: medium variance. Clustering: high.",
+   "card_partial_size_density": "nodes 200-300, density 0.03",
+   "card_partial_structure_clustering": "random geometric, high clustering",
+   "card_partial_density_degvar": "density 0.03, medium degree variance",
+   "card_numeric": "random geometric, n in [200, 300], density 0.029, degree CV 0.41, clustering/density 21.1"
+  },
+  "labels": {
+   "dsatur_mean": 8.6,
+   "rlf_mean": 8.6,
+   "portfolio_best_mean": 8.6,
+   "clique_lb_mean": 8.4,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.1999999999999993,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.023809523809523725
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 8.60 within 0.25 of clique lower bound 8.40: provably (near-)optimal"
+ },
+ {
+  "family_id": "ba_m3_n100-300",
+  "structure_type": "scale_free",
+  "generator": "ba",
+  "params": {
+   "m": 3
+  },
+  "n_range": [
+   100,
+   300
+  ],
+  "probe_stats": {
+   "density": 0.038738484678467085,
+   "deg_cv": 0.9150148272514343,
+   "clustering": 0.11342096105217933,
+   "n": 173.0
+  },
+  "cards": {
+   "card": "scale-free, nodes 100-300, density 0.04, high degree variance, moderate clustering",
+   "card_no_structure": "nodes 100-300, density 0.04, high degree variance, moderate clustering",
+   "card_paraphrase_1": "scale-free; between 100 and 300 vertices; edge density about 0.04; very uneven, heavy-tailed degrees; some local clustering",
+   "card_paraphrase_2": "Graphs of type scale-free, with 100 to 300 nodes, 4% of possible edges present, a few hubs with much higher degree and mild excess of triangles.",
+   "card_paraphrase_3": "Size: 100-300 nodes. Density: 0.04. Structure: scale-free. Degrees: high variance. Clustering: moderate.",
+   "card_partial_size_density": "nodes 100-300, density 0.04",
+   "card_partial_structure_clustering": "scale-free, moderate clustering",
+   "card_partial_density_degvar": "density 0.04, high degree variance",
+   "card_numeric": "scale-free, n in [100, 300], density 0.039, degree CV 0.92, clustering/density 2.9"
+  },
+  "labels": {
+   "dsatur_mean": 4.0,
+   "rlf_mean": 4.4,
+   "portfolio_best_mean": 4.0,
+   "clique_lb_mean": 3.8,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.20000000000000018,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.052631578947368474
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 4.00 within 0.25 of clique lower bound 3.80: provably (near-)optimal"
+ },
+ {
+  "family_id": "cave_k10_p0.1_n100-200",
+  "structure_type": "caveman",
+  "generator": "caveman",
+  "params": {
+   "k": 10,
+   "p": 0.1
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.06760457365732671,
+   "deg_cv": 0.10399642661213875,
+   "clustering": 0.7607476234436035,
+   "n": 138.0
+  },
+  "cards": {
+   "card": "clustered cliques, nodes 100-200, density 0.07, low degree variance, high clustering",
+   "card_no_structure": "nodes 100-200, density 0.07, low degree variance, high clustering",
+   "card_paraphrase_1": "clustered cliques; between 100 and 200 vertices; edge density about 0.07; nearly regular degrees; strongly clustered neighborhoods",
+   "card_paraphrase_2": "Graphs of type clustered cliques, with 100 to 200 nodes, 7% of possible edges present, narrow spread of vertex degrees and many more triangles than a random graph.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.07. Structure: clustered cliques. Degrees: low variance. Clustering: high.",
+   "card_partial_size_density": "nodes 100-200, density 0.07",
+   "card_partial_structure_clustering": "clustered cliques, high clustering",
+   "card_partial_density_degvar": "density 0.07, low degree variance",
+   "card_numeric": "clustered cliques, n in [100, 200], density 0.068, degree CV 0.10, clustering/density 11.3"
+  },
+  "labels": {
+   "dsatur_mean": 8.9,
+   "rlf_mean": 8.9,
+   "portfolio_best_mean": 8.9,
+   "clique_lb_mean": 8.8,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.09999999999999964,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.011363636363636322
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 8.90 within 0.25 of clique lower bound 8.80: provably (near-)optimal"
+ },
+ {
+  "family_id": "kpart_k5_p0.5_n100-200",
+  "structure_type": "equipartite",
+  "generator": "kpartite",
+  "params": {
+   "k": 5,
+   "p": 0.5
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.40279518709463824,
+   "deg_cv": 0.08738852366805076,
+   "clustering": 0.37806901037693025,
+   "n": 161.8
+  },
+  "cards": {
+   "card": "hidden k-partite (equipartite), nodes 100-200, density 0.40, low degree variance, low clustering",
+   "card_no_structure": "nodes 100-200, density 0.40, low degree variance, low clustering",
+   "card_paraphrase_1": "hidden k-partite (equipartite); between 100 and 200 vertices; edge density about 0.40; nearly regular degrees; clustering close to a random graph",
+   "card_paraphrase_2": "Graphs of type hidden k-partite (equipartite), with 100 to 200 nodes, 40% of possible edges present, narrow spread of vertex degrees and few closed triples.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.40. Structure: hidden k-partite (equipartite). Degrees: low variance. Clustering: low.",
+   "card_partial_size_density": "nodes 100-200, density 0.40",
+   "card_partial_structure_clustering": "hidden k-partite (equipartite), low clustering",
+   "card_partial_density_degvar": "density 0.40, low degree variance",
+   "card_numeric": "hidden k-partite (equipartite), n in [100, 200], density 0.403, degree CV 0.09, clustering/density 0.9"
+  },
+  "labels": {
+   "dsatur_mean": 5.0,
+   "rlf_mean": 5.0,
+   "portfolio_best_mean": 5.0,
+   "clique_lb_mean": 5.0,
+   "planted_k_upper": 5,
+   "gap_dsatur_to_lb": 0.0,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.0
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 5.00 within 0.25 of clique lower bound 5.00: provably (near-)optimal"
+ },
+ {
+  "family_id": "cave_k5_p0.05_n100-200",
+  "structure_type": "caveman",
+  "generator": "caveman",
+  "params": {
+   "k": 5,
+   "p": 0.05
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.02797431467164217,
+   "deg_cv": 0.11322792693972587,
+   "clustering": 0.8693966686725616,
+   "n": 149.0
+  },
+  "cards": {
+   "card": "clustered cliques, nodes 100-200, density 0.03, low degree variance, high clustering",
+   "card_no_structure": "nodes 100-200, density 0.03, low degree variance, high clustering",
+   "card_paraphrase_1": "clustered cliques; between 100 and 200 vertices; edge density about 0.03; nearly regular degrees; strongly clustered neighborhoods",
+   "card_paraphrase_2": "Graphs of type clustered cliques, with 100 to 200 nodes, 3% of possible edges present, narrow spread of vertex degrees and many more triangles than a random graph.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.03. Structure: clustered cliques. Degrees: low variance. Clustering: high.",
+   "card_partial_size_density": "nodes 100-200, density 0.03",
+   "card_partial_structure_clustering": "clustered cliques, high clustering",
+   "card_partial_density_degvar": "density 0.03, low degree variance",
+   "card_numeric": "clustered cliques, n in [100, 200], density 0.028, degree CV 0.11, clustering/density 31.1"
+  },
+  "labels": {
+   "dsatur_mean": 5.0,
+   "rlf_mean": 5.0,
+   "portfolio_best_mean": 5.0,
+   "clique_lb_mean": 5.0,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.0,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.0
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 5.00 within 0.25 of clique lower bound 5.00: provably (near-)optimal"
+ },
+ {
+  "family_id": "kpart_k4_p0.5_n100-200",
+  "structure_type": "equipartite",
+  "generator": "kpartite",
+  "params": {
+   "k": 4,
+   "p": 0.5
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.3789588888668508,
+   "deg_cv": 0.09236159846186638,
+   "clustering": 0.33746441900730134,
+   "n": 156.4
+  },
+  "cards": {
+   "card": "hidden k-partite (equipartite), nodes 100-200, density 0.38, low degree variance, low clustering",
+   "card_no_structure": "nodes 100-200, density 0.38, low degree variance, low clustering",
+   "card_paraphrase_1": "hidden k-partite (equipartite); between 100 and 200 vertices; edge density about 0.38; nearly regular degrees; clustering close to a random graph",
+   "card_paraphrase_2": "Graphs of type hidden k-partite (equipartite), with 100 to 200 nodes, 38% of possible edges present, narrow spread of vertex degrees and few closed triples.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.38. Structure: hidden k-partite (equipartite). Degrees: low variance. Clustering: low.",
+   "card_partial_size_density": "nodes 100-200, density 0.38",
+   "card_partial_structure_clustering": "hidden k-partite (equipartite), low clustering",
+   "card_partial_density_degvar": "density 0.38, low degree variance",
+   "card_numeric": "hidden k-partite (equipartite), n in [100, 200], density 0.379, degree CV 0.09, clustering/density 0.9"
+  },
+  "labels": {
+   "dsatur_mean": 4.0,
+   "rlf_mean": 4.0,
+   "portfolio_best_mean": 4.0,
+   "clique_lb_mean": 4.0,
+   "planted_k_upper": 4,
+   "gap_dsatur_to_lb": 0.0,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.0
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 4.00 within 0.25 of clique lower bound 4.00: provably (near-)optimal"
+ },
+ {
+  "family_id": "hyb_r0.10_q0.01_n100-200",
+  "structure_type": "hybrid_geometric",
+  "generator": "geometric",
+  "params": {
+   "radius": 0.1,
+   "noise": 0.01
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.03791455863860761,
+   "deg_cv": 0.44366790950298307,
+   "clustering": 0.33228621184825896,
+   "n": 149.1
+  },
+  "cards": {
+   "card": "geometric plus random edges, nodes 100-200, density 0.04, medium degree variance, high clustering",
+   "card_no_structure": "nodes 100-200, density 0.04, medium degree variance, high clustering",
+   "card_paraphrase_1": "geometric plus random edges; between 100 and 200 vertices; edge density about 0.04; moderately uneven degrees; strongly clustered neighborhoods",
+   "card_paraphrase_2": "Graphs of type geometric plus random edges, with 100 to 200 nodes, 4% of possible edges present, moderate spread of vertex degrees and many more triangles than a random graph.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.04. Structure: geometric plus random edges. Degrees: medium variance. Clustering: high.",
+   "card_partial_size_density": "nodes 100-200, density 0.04",
+   "card_partial_structure_clustering": "geometric plus random edges, high clustering",
+   "card_partial_density_degvar": "density 0.04, medium degree variance",
+   "card_numeric": "geometric plus random edges, n in [100, 200], density 0.038, degree CV 0.44, clustering/density 8.8"
+  },
+  "labels": {
+   "dsatur_mean": 6.6,
+   "rlf_mean": 6.7,
+   "portfolio_best_mean": 6.6,
+   "clique_lb_mean": 6.5,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.09999999999999964,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.01538461538461533
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 6.60 within 0.25 of clique lower bound 6.50: provably (near-)optimal"
+ },
+ {
+  "family_id": "ba_m2_n100-200",
+  "structure_type": "scale_free",
+  "generator": "ba",
+  "params": {
+   "m": 2
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.029570858630179497,
+   "deg_cv": 1.001963722705841,
+   "clustering": 0.09289659336209297,
+   "n": 140.2
+  },
+  "cards": {
+   "card": "scale-free, nodes 100-200, density 0.03, high degree variance, moderate clustering",
+   "card_no_structure": "nodes 100-200, density 0.03, high degree variance, moderate clustering",
+   "card_paraphrase_1": "scale-free; between 100 and 200 vertices; edge density about 0.03; very uneven, heavy-tailed degrees; some local clustering",
+   "card_paraphrase_2": "Graphs of type scale-free, with 100 to 200 nodes, 3% of possible edges present, a few hubs with much higher degree and mild excess of triangles.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.03. Structure: scale-free. Degrees: high variance. Clustering: moderate.",
+   "card_partial_size_density": "nodes 100-200, density 0.03",
+   "card_partial_structure_clustering": "scale-free, moderate clustering",
+   "card_partial_density_degvar": "density 0.03, high degree variance",
+   "card_numeric": "scale-free, n in [100, 200], density 0.030, degree CV 1.00, clustering/density 3.1"
+  },
+  "labels": {
+   "dsatur_mean": 3.0,
+   "rlf_mean": 3.6,
+   "portfolio_best_mean": 3.0,
+   "clique_lb_mean": 3.0,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.0,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.0
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 3.00 within 0.25 of clique lower bound 3.00: provably (near-)optimal"
+ },
+ {
+  "family_id": "ba_m3_n200-300",
+  "structure_type": "scale_free",
+  "generator": "ba",
+  "params": {
+   "m": 3
+  },
+  "n_range": [
+   200,
+   300
+  ],
+  "probe_stats": {
+   "density": 0.024125424106149315,
+   "deg_cv": 0.9545044541358948,
+   "clustering": 0.07909647785127163,
+   "n": 247.7
+  },
+  "cards": {
+   "card": "scale-free, nodes 200-300, density 0.02, high degree variance, moderate clustering",
+   "card_no_structure": "nodes 200-300, density 0.02, high degree variance, moderate clustering",
+   "card_paraphrase_1": "scale-free; between 200 and 300 vertices; edge density about 0.02; very uneven, heavy-tailed degrees; some local clustering",
+   "card_paraphrase_2": "Graphs of type scale-free, with 200 to 300 nodes, 2% of possible edges present, a few hubs with much higher degree and mild excess of triangles.",
+   "card_paraphrase_3": "Size: 200-300 nodes. Density: 0.02. Structure: scale-free. Degrees: high variance. Clustering: moderate.",
+   "card_partial_size_density": "nodes 200-300, density 0.02",
+   "card_partial_structure_clustering": "scale-free, moderate clustering",
+   "card_partial_density_degvar": "density 0.02, high degree variance",
+   "card_numeric": "scale-free, n in [200, 300], density 0.024, degree CV 0.95, clustering/density 3.3"
+  },
+  "labels": {
+   "dsatur_mean": 4.0,
+   "rlf_mean": 4.3,
+   "portfolio_best_mean": 4.0,
+   "clique_lb_mean": 3.8,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.20000000000000018,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.052631578947368474
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 4.00 within 0.25 of clique lower bound 3.80: provably (near-)optimal"
+ },
+ {
+  "family_id": "plc_m5_p0.9_n100-200",
+  "structure_type": "scale_free",
+  "generator": "plc",
+  "params": {
+   "m": 5,
+   "p": 0.9
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.07395241870789059,
+   "deg_cv": 0.7942165255546569,
+   "clustering": 0.43838157057762145,
+   "n": 134.0
+  },
+  "cards": {
+   "card": "scale-free, nodes 100-200, density 0.07, high degree variance, high clustering",
+   "card_no_structure": "nodes 100-200, density 0.07, high degree variance, high clustering",
+   "card_paraphrase_1": "scale-free; between 100 and 200 vertices; edge density about 0.07; very uneven, heavy-tailed degrees; strongly clustered neighborhoods",
+   "card_paraphrase_2": "Graphs of type scale-free, with 100 to 200 nodes, 7% of possible edges present, a few hubs with much higher degree and many more triangles than a random graph.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.07. Structure: scale-free. Degrees: high variance. Clustering: high.",
+   "card_partial_size_density": "nodes 100-200, density 0.07",
+   "card_partial_structure_clustering": "scale-free, high clustering",
+   "card_partial_density_degvar": "density 0.07, high degree variance",
+   "card_numeric": "scale-free, n in [100, 200], density 0.074, degree CV 0.79, clustering/density 5.9"
+  },
+  "labels": {
+   "dsatur_mean": 6.1,
+   "rlf_mean": 6.1,
+   "portfolio_best_mean": 6.0,
+   "clique_lb_mean": 5.9,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.1999999999999993,
+   "headroom_proxy_vs_dsatur": 0.09999999999999964,
+   "difficulty_rel": 0.03389830508474564
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 6.10 within 0.25 of clique lower bound 5.90: provably (near-)optimal"
+ },
+ {
+  "family_id": "queen_keep0.4_n100-200",
+  "structure_type": "queen",
+  "generator": "queen",
+  "params": {
+   "keep": 0.4
+  },
+  "n_range": [
+   100,
+   200
+  ],
+  "probe_stats": {
+   "density": 0.16212655299881223,
+   "deg_cv": 0.16315947771072387,
+   "clustering": 0.3209682941436768,
+   "n": 147.7
+  },
+  "cards": {
+   "card": "queen-grid-like, nodes 100-200, density 0.16, low degree variance, moderate clustering",
+   "card_no_structure": "nodes 100-200, density 0.16, low degree variance, moderate clustering",
+   "card_paraphrase_1": "queen-grid-like; between 100 and 200 vertices; edge density about 0.16; nearly regular degrees; some local clustering",
+   "card_paraphrase_2": "Graphs of type queen-grid-like, with 100 to 200 nodes, 16% of possible edges present, narrow spread of vertex degrees and mild excess of triangles.",
+   "card_paraphrase_3": "Size: 100-200 nodes. Density: 0.16. Structure: queen-grid-like. Degrees: low variance. Clustering: moderate.",
+   "card_partial_size_density": "nodes 100-200, density 0.16",
+   "card_partial_structure_clustering": "queen-grid-like, moderate clustering",
+   "card_partial_density_degvar": "density 0.16, low degree variance",
+   "card_numeric": "queen-grid-like, n in [100, 200], density 0.162, degree CV 0.16, clustering/density 2.0"
+  },
+  "labels": {
+   "dsatur_mean": 12.5,
+   "rlf_mean": 12.5,
+   "portfolio_best_mean": 12.5,
+   "clique_lb_mean": 12.4,
+   "planted_k_upper": null,
+   "gap_dsatur_to_lb": 0.09999999999999964,
+   "headroom_proxy_vs_dsatur": 0.0,
+   "difficulty_rel": 0.008064516129032228
+  },
+  "tier": 2,
+  "drop_reason": "DSATUR mean 12.50 within 0.25 of clique lower bound 12.40: provably (near-)optimal"
+ }
+]

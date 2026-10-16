@@ -1,0 +1,5 @@
+{
+  "card": "clustered cliques, nodes 320-500, density 0.02, low degree variance, high clustering",
+  "p_idx": 2,
+  "paraphrase": "Distribution of caveman network instances having nodes 320-500 and density 0.02. The topology exhibits low degree variance alongside high clustering."
+}

@@ -1,0 +1,90 @@
+================================================================================
+PHASE 1 DIAGNOSTICS SUMMARY REPORT (EVALUATED ON VAL GRAPHS, N=20/FAMILY)
+Reference R(F) = min(DSATUR, RLF, Universal) on Val
+================================================================================
+
+1. OVERVIEW COMPARISON ACROSS DIAGNOSTICS ON VAL (Non-Control, N=99 families):
+   D1' Near-Optimal Ceiling vs R(F) : Headroom = 0.951 colors [0.662, 1.324] | 8.01% [5.86%, 10.48%]
+       Median Headroom              : 0.600 colors | 5.88%
+       Families with Headroom >= 3% : 66 / 99 (66.7%)
+   D4  Tuned Parametric RLF vs R(F) : Gap = +0.108 colors [+0.033, +0.245] | +0.91% [+0.29%, +2.10%]
+       Median Gap                   : +0.000 colors | +0.00%
+       Fallback to R(F) triggered   : 63 / 99 (63.6%)
+       Families with Gap >= 3%      : 1 / 99 (1.0%)
+   D5  Constructive Ceiling vs R(F) : Headroom = 0.500 colors [0.379, 0.671] | 4.21% [3.36%, 5.47%]
+       Median Headroom              : 0.400 colors | 3.75%
+       Families with Headroom >= 3% : 60 / 99 (60.6%)
+
+2. INTERVAL CONTROL GROUP (N=7 families, verified DSATUR = clique LB):
+   D1' Headroom : 0.000 colors (0.00%)
+   D4  Gap      : 0.000 colors (0.00%)
+   D5  Headroom : 0.000 colors (0.00%)
+
+--- D1' GRAPH CEILING ON VAL BY POOL (Non-Control, N=99) ---
+Pool               | N    | Mean Colors  | Headroom/Gap (%) [95% CI] 
+--------------------------------------------------------------------
+train_pool         | 49   | 1.232        |  10.48% [ 7.29%, 14.17%]
+heldout_type       | 26   | 0.231        |   2.11% [ 1.13%,  3.18%]
+heldout_size       | 14   | 1.350        |   9.37% [ 4.56%, 18.41%]
+heldout_combo      | 10   | 0.890        |   7.82% [ 7.18%,  8.45%]
+
+--- D1' GRAPH CEILING ON VAL BY STRUCTURE TYPE (All families, N=106) ---
+Structure Type       | N    | Mean Colors  | Headroom/Gap (%) [95% CI] 
+----------------------------------------------------------------------
+caveman              | 9    | 0.300        |   2.71% [ 1.21%,  4.04%]
+equipartite          | 11   | 3.959        |  20.31% [12.26%, 28.91%]
+geometric            | 7    | 0.079        |   0.69% [ 0.23%,  1.12%]
+gnp                  | 18   | 1.064        |   8.04% [ 7.07%,  8.92%]
+hybrid_geometric     | 5    | 0.220        |   2.01% [ 1.06%,  3.28%]
+interval             | 7    | 0.000        |   0.00% [ 0.00%,  0.00%]
+mycielski            | 10   | 0.210        |   3.27% [ 1.55%,  4.88%]
+planted_partition    | 16   | 0.878        |   6.92% [ 6.14%,  7.74%]
+queen                | 7    | 0.521        |   3.57% [ 1.34%,  6.17%]
+scale_free           | 7    | 0.100        |   1.49% [ 0.84%,  2.41%]
+small_world          | 9    | 0.733        |   9.19% [ 7.41%, 11.06%]
+
+--- D4 TUNED PARAMETRIC RLF GAP ON VAL BY POOL (Non-Control, N=99) ---
+Pool               | N    | Mean Colors  | Headroom/Gap (%) [95% CI] 
+--------------------------------------------------------------------
+train_pool         | 49   | 0.046        |   0.39% [ 0.24%,  0.56%]
+heldout_type       | 26   | 0.025        |   0.23% [ 0.04%,  0.45%]
+heldout_size       | 14   | 0.500        |   3.47% [ 0.14%, 10.55%]
+heldout_combo      | 10   | 0.075        |   0.66% [ 0.22%,  1.20%]
+
+--- D4 TUNED PARAMETRIC RLF GAP ON VAL BY STRUCTURE TYPE (All families, N=106) ---
+Structure Type       | N    | Mean Colors  | Headroom/Gap (%) [95% CI] 
+----------------------------------------------------------------------
+caveman              | 9    | 0.028        |   0.25% [ 0.04%,  0.50%]
+equipartite          | 11   | 0.664        |   3.40% [ 0.33%, 10.24%]
+geometric            | 7    | 0.007        |   0.06% [ 0.00%,  0.19%]
+gnp                  | 18   | 0.042        |   0.31% [ 0.07%,  0.65%]
+hybrid_geometric     | 5    | 0.040        |   0.37% [ 0.00%,  1.16%]
+interval             | 7    | 0.000        |   0.00% [ 0.00%,  0.00%]
+mycielski            | 10   | 0.035        |   0.54% [ 0.17%,  0.97%]
+planted_partition    | 16   | 0.047        |   0.37% [ 0.13%,  0.66%]
+queen                | 7    | 0.057        |   0.39% [ 0.05%,  0.82%]
+scale_free           | 7    | 0.000        |   0.00% [ 0.00%,  0.00%]
+small_world          | 9    | 0.067        |   0.84% [ 0.20%,  1.70%]
+
+--- D5 CONSTRUCTIVE CEILING ON VAL BY POOL (Non-Control, N=99) ---
+Pool               | N    | Mean Colors  | Headroom/Gap (%) [95% CI] 
+--------------------------------------------------------------------
+train_pool         | 49   | 0.552        |   4.70% [ 4.11%,  5.33%]
+heldout_type       | 26   | 0.179        |   1.64% [ 0.95%,  2.39%]
+heldout_size       | 14   | 0.875        |   6.07% [ 2.61%, 12.92%]
+heldout_combo      | 10   | 0.555        |   4.88% [ 4.41%,  5.39%]
+
+--- D5 CONSTRUCTIVE CEILING ON VAL BY STRUCTURE TYPE (All families, N=106) ---
+Structure Type       | N    | Mean Colors  | Headroom/Gap (%) [95% CI] 
+----------------------------------------------------------------------
+caveman              | 9    | 0.294        |   2.66% [ 1.21%,  3.95%]
+equipartite          | 11   | 1.450        |   7.44% [ 4.14%, 13.82%]
+geometric            | 7    | 0.071        |   0.62% [ 0.23%,  0.96%]
+gnp                  | 18   | 0.606        |   4.58% [ 3.92%,  5.23%]
+hybrid_geometric     | 5    | 0.180        |   1.65% [ 0.88%,  2.47%]
+interval             | 7    | 0.000        |   0.00% [ 0.00%,  0.00%]
+mycielski            | 10   | 0.185        |   2.88% [ 1.46%,  4.26%]
+planted_partition    | 16   | 0.538        |   4.23% [ 3.69%,  4.87%]
+queen                | 7    | 0.371        |   2.55% [ 1.03%,  4.46%]
+scale_free           | 7    | 0.093        |   1.38% [ 0.90%,  1.90%]
+small_world          | 9    | 0.544        |   6.82% [ 4.74%,  9.11%]

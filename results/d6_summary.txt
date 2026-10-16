@@ -1,0 +1,38 @@
+================================================================================
+DIAGNOSTIC D6 SUMMARY REPORT (DETERMINISTIC FIXED HEURISTICS ON TEST)
+Reference R(F) = min(DSATUR, RLF, Universal) on Val
+================================================================================
+
+1. D6(b) BEST DETERMINISTIC HEURISTIC (out of 20 named rules, chosen on VAL, reported on TEST):
+   Non-Control (N=99): Gap vs R(F) on TEST = +0.002 colors [-0.034, +0.060] | +0.02% [-0.28%, +0.51%]
+   Median Gap vs R(F)                      = +0.000 colors | +0.00%
+   Families with Gap >= 3.0%               = 1 / 99 (1.0%)
+
+2. D6(a) EXPECTED RANDOM ROLLOUTS (Mean over 200 rollouts per graph):
+   Non-Control Mean R(F) on TEST          = 11.883 colors
+   Non-Control Mean Random Rollout        = 12.246 colors
+   R(F) vs Expected Rollout Difference    = -0.363 colors (-3.05%)
+   (Demonstrates that deterministic R(F) is substantially superior to an average rollout)
+
+--- D6(b) DETERMINISTIC HEURISTIC GAP ON TEST BY POOL (Non-Control, N=99) ---
+Pool               | N    | Mean Colors  | Gap (%) [95% CI]          
+--------------------------------------------------------------------
+train_pool         | 49   | -0.024       |  -0.20% [-0.44%,  0.01%]
+heldout_type       | 26   | -0.005       |  -0.04% [-0.31%,  0.15%]
+heldout_size       | 14   | 0.136        |   0.94% [-0.45%,  3.60%]
+heldout_combo      | 10   | -0.038       |  -0.34% [-0.72%,  0.10%]
+
+--- D6(b) DETERMINISTIC HEURISTIC GAP ON TEST BY STRUCTURE TYPE (All families, N=106) ---
+Structure Type       | N    | Mean Colors  | Gap (%) [95% CI]          
+----------------------------------------------------------------------
+caveman              | 9    | -0.073       |  -0.66% [-1.26%, -0.05%]
+equipartite          | 11   | 0.184        |   0.95% [-0.41%,  3.54%]
+geometric            | 7    | 0.014        |   0.12% [ 0.00%,  0.25%]
+gnp                  | 18   | -0.013       |  -0.10% [-0.40%,  0.16%]
+hybrid_geometric     | 5    | -0.060       |  -0.55% [-1.32%,  0.04%]
+interval             | 7    | 0.000        |   0.00% [ 0.00%,  0.00%]
+mycielski            | 10   | -0.004       |  -0.06% [-0.37%,  0.27%]
+planted_partition    | 16   | -0.030       |  -0.24% [-0.51%,  0.04%]
+queen                | 7    | -0.003       |  -0.02% [-0.37%,  0.27%]
+scale_free           | 7    | 0.014        |   0.21% [-0.10%,  0.52%]
+small_world          | 9    | -0.029       |  -0.36% [-1.02%,  0.23%]

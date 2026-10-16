@@ -1,0 +1,5 @@
+{
+  "card": "scale-free, nodes 200-300, density 0.09, high degree variance, moderate clustering",
+  "p_idx": 2,
+  "paraphrase": "Distribution of scale_free network instances having nodes 200-300 and density 0.09. The topology exhibits high degree variance alongside moderate clustering."
+}

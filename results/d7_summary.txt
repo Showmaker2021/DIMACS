@@ -1,0 +1,23 @@
+================================================================================
+DIAGNOSTIC D7: CARD-BASED ALGORITHM SELECTOR {DSATUR, RLF}
+Evaluated across all 106 families using Cross-Validation
+================================================================================
+
+1. BASELINE COMPARISON (Without Selector):
+   Always DSATUR : Accuracy = 24.5% | Mean Regret = 0.674 colors (4.49%)
+   Always RLF    : Accuracy = 75.5% | Mean Regret = 0.028 colors (0.42%)
+   (RLF is better on 80/106 families = 75.5%; DSATUR is better/equal on 26/106 families)
+
+2. CROSS-VALIDATION BY FAMILY (LOOCV across 106 families):
+   Logistic Regression : Accuracy = 87.7% | Mean Regret = 0.014 colors (0.16%) | Median = 0.00%
+   Decision Tree       : Accuracy = 86.8% | Mean Regret = 0.010 colors (0.13%) | Median = 0.00%
+
+3. CROSS-VALIDATION BY STRUCTURE TYPE (Leave-One-Group-Out CV across 11 types):
+   Logistic Regression : Accuracy = 81.1% | Mean Regret = 0.025 colors (0.32%) | Median = 0.00%
+   Decision Tree       : Accuracy = 82.1% | Mean Regret = 0.034 colors (0.45%) | Median = 0.00%
+
+4. NON-CONTROL FAMILIES BREAKDOWN (N=99 families):
+   Always RLF Regret          : 0.030 colors (0.45%)
+   Always DSATUR Regret       : 0.721 colors (4.81%)
+   Decision Tree (Family CV)  : Regret = 0.011 colors (0.14%)
+   Logistic Reg (Family CV)   : Regret = 0.015 colors (0.18%)

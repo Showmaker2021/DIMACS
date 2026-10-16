@@ -1,0 +1,5 @@
+{
+  "card": "random (Erdos-Renyi), nodes 100-200, density 0.20, low degree variance, low clustering",
+  "p_idx": 3,
+  "paraphrase": "Network ensemble with nodes 100-200, density 0.20, low degree variance, and low clustering, generated via gnp structure."
+}

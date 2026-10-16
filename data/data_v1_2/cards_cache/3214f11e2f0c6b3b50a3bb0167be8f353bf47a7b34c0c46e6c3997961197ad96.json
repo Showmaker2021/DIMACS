@@ -1,0 +1,5 @@
+{
+  "card": "small-world, nodes 200-300, density 0.06, low degree variance, high clustering",
+  "p_idx": 3,
+  "paraphrase": "Network ensemble with nodes 200-300, density 0.06, low degree variance, and high clustering, generated via small_world structure."
+}

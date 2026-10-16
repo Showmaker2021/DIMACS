@@ -1,0 +1,54 @@
+================================================================================
+ORACLE-GAP GATE SUMMARY REPORT (PHASE 1 - FROZEN DATASET v1.0)
+Reference R(F) = min(DSATUR, RLF, Universal) chosen on Val (all within API class)
+Per-Family P(F) = CMA-ES tuned parametric heuristic (with DSATUR fallback)
+================================================================================
+
+1. AGGREGATE GAP A: R(F) - P(F) (Cluster Bootstrap 95% CI over families)
+   Non-Control Families (N=99):
+     Gap A vs R(F) (colors) : -0.698 colors  [95% CI: -0.990, -0.481]
+     Gap A vs R(F) (%)      : -5.87%       [95% CI: -8.05%, -4.29%]
+     Gain vs DSATUR (colors): +0.021 colors  [95% CI: -0.011, +0.077]
+     Gain vs DSATUR (%)     : +0.17%       [95% CI: -0.09%, +0.62%]
+   Interval Control Families (N=7):
+     Gap A vs R(F) (colors) : +0.000 colors  [95% CI: +0.000, +0.000]
+     Gap A vs R(F) (%)      : +0.00%       [95% CI: +0.00%, +0.00%]
+   Overall (All N=106):
+     Gap A vs R(F) (colors) : -0.652 colors  [95% CI: -0.927, -0.452]
+     Gap A vs R(F) (%)      : -5.14%       [95% CI: -7.17%, -3.69%]
+     Gain vs DSATUR (colors): +0.020 colors  [95% CI: -0.011, +0.082]
+     Gain vs DSATUR (%)     : +0.15%       [95% CI: -0.08%, +0.61%]
+
+   Reference Portfolio Selection on Val (Non-Control, N=99):
+     rlf         : 81 / 99 (81.8%)
+     dsatur      : 14 / 99 (14.1%)
+     universal   :  4 / 99 (4.0%)
+
+2. BREAKDOWN BY POOL (Non-Control families):
+Pool               | N    | Mean R(F)    | Mean Tuned   | Gap A vs R(F) [95% CI]     | Gain vs DSATUR [95% CI]
+---------------------------------------------------------------------------------------------------------
+train_pool         | 49   | 11.78        | 12.43        | -5.52% [-6.69%, -4.17%] | +0.43% [-0.06%, +1.34%]
+heldout_type       | 26   | 10.97        | 11.17        | -1.87% [-3.06%, -0.78%] | -0.08% [-0.28%, +0.09%]
+heldout_size       | 14   | 14.39        | 16.15        | -12.18% [-23.22%, -5.80%] | -0.06% [-0.20%, +0.06%]
+heldout_combo      | 10   | 11.29        | 12.03        | -6.54% [-7.92%, -5.11%] | -0.15% [-0.47%, +0.11%]
+
+3. BREAKDOWN BY STRUCTURE TYPE (All families):
+Structure Type       | N    | DSATUR   | RLF      | Mean R(F)  | Tuned    | Gap A vs R(F) (%)    | Gain vs DS (%)
+---------------------------------------------------------------------------------------------------------
+caveman              | 9    | 11.22    | 11.13    | 11.11      | 11.20    |  -0.78% [-1.63%,-0.24%] | +0.22%
+equipartite          | 11   | 22.25    | 19.40    | 19.40      | 22.05    | -13.69% [-24.76%,-7.76%] | +0.89%
+geometric            | 7    | 11.65    | 11.64    | 11.65      | 11.66    |  -0.07% [-0.47%,+0.26%] | -0.07%
+gnp                  | 18   | 14.04    | 13.25    | 13.25      | 14.04    |  -5.94% [-6.86%,-4.76%] | +0.00%
+hybrid_geometric     | 5    | 11.04    | 10.93    | 10.96      | 11.06    |  -0.91% [-1.28%,-0.62%] | -0.18%
+interval             | 7    | 23.99    | 23.99    | 23.99      | 23.99    |  +0.00% [+0.00%,+0.00%] | +0.00%
+mycielski            | 10   | 6.52     | 6.44     | 6.44       | 6.51     |  -1.15% [-1.93%,-0.23%] | +0.09%
+planted_partition    | 16   | 13.72    | 12.75    | 12.75      | 13.73    |  -7.68% [-9.03%,-6.05%] | -0.07%
+queen                | 7    | 15.25    | 14.57    | 14.57      | 15.25    |  -4.65% [-6.63%,-2.66%] | -0.04%
+scale_free           | 7    | 6.69     | 7.09     | 6.69       | 6.69     |  -0.04% [-0.54%,+0.33%] | -0.04%
+small_world          | 9    | 8.29     | 7.93     | 7.93       | 8.29     |  -4.48% [-6.05%,-2.79%] | +0.05%
+
+================================================================================
+GATE SUMMARY: avg Gap A vs R(F) = -5.87% [95% CI: -8.05%, -4.29%] (Non-Control, N=99)
+              avg Gain vs DS    = +0.17% [95% CI: -0.09%, +0.62%] (Non-Control, N=99)
+              Overall Gap A     = -5.14% [95% CI: -7.17%, -3.69%] (Overall, N=106)
+================================================================================

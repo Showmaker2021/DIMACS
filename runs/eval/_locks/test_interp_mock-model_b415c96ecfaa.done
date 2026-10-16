@@ -1,0 +1,8 @@
+{
+  "run_id": "auditor_lock_03",
+  "split": "test_interp",
+  "model_name": "mock-model",
+  "config_hash": "b415c96ecfaa",
+  "timestamp": "2026-10-16T04:59:40.114475+00:00",
+  "git_commit": "unknown"
+}

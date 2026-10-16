@@ -1,0 +1,1 @@
+{"status": "timeout", "success": false, "error": "Failed on seed 1000: Per-graph timeout exceeded (1.000s)", "color_counts": [], "mean_colors": null, "mean_tie_break": 0.0, "behavior_hash": null, "probe_fingerprint": null, "runtime_s": 4.791407200042158, "graphs_count": 2}

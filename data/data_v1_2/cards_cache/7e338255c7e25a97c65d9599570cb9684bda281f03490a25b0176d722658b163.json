@@ -1,0 +1,5 @@
+{
+  "card": "random geometric, nodes 200-300, density 0.02, medium degree variance, high clustering",
+  "p_idx": 2,
+  "paraphrase": "Distribution of geometric network instances having nodes 200-300 and density 0.02. The topology exhibits medium degree variance alongside high clustering."
+}

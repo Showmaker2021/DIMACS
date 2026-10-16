@@ -1,0 +1,119 @@
+{
+  "train_metadata": {
+    "n_train_families": 41,
+    "rlf_wins_train": 29,
+    "dsatur_wins_train": 12
+  },
+  "decision_tree": {
+    "train_pool": {
+      "split": "train_pool",
+      "n_families": 41,
+      "accuracy": 0.9024390243902439,
+      "mean_regret_colors": 0.05975609756097559,
+      "regret_pct": 0.4406871121503732,
+      "mean_always_rlf_regret": 0.06219512195121942,
+      "mean_always_dsatur_regret": 0.6365853658536585
+    },
+    "val": {
+      "split": "val",
+      "n_families": 7,
+      "accuracy": 0.7142857142857143,
+      "mean_regret_colors": 0.08571428571428566,
+      "regret_pct": 1.0849909584086794,
+      "mean_always_rlf_regret": 0.0571428571428572,
+      "mean_always_dsatur_regret": 0.2857142857142857
+    },
+    "test_interp": {
+      "split": "test_interp",
+      "n_families": 7,
+      "accuracy": 0.7142857142857143,
+      "mean_regret_colors": 0.05428571428571427,
+      "regret_pct": 0.42534139243340036,
+      "mean_always_rlf_regret": 0.05428571428571427,
+      "mean_always_dsatur_regret": 0.557142857142857
+    },
+    "test_extrap": {
+      "split": "test_extrap",
+      "n_families": 15,
+      "accuracy": 1.0,
+      "mean_regret_colors": 0.0,
+      "regret_pct": 0.0,
+      "mean_always_rlf_regret": 0.0,
+      "mean_always_dsatur_regret": 1.6559999999999997
+    },
+    "test_comp": {
+      "split": "test_comp",
+      "n_families": 10,
+      "accuracy": 1.0,
+      "mean_regret_colors": 0.0,
+      "regret_pct": 0.0,
+      "mean_always_rlf_regret": 0.0,
+      "mean_always_dsatur_regret": 0.7819999999999997
+    },
+    "heldout_type": {
+      "split": "heldout_type",
+      "n_families": 26,
+      "accuracy": 0.8846153846153846,
+      "mean_regret_colors": 0.006153846153846091,
+      "regret_pct": 0.054469939402191865,
+      "mean_always_rlf_regret": 0.0015384615384616423,
+      "mean_always_dsatur_regret": 0.29307692307692296
+    }
+  },
+  "logistic_regression": {
+    "train_pool": {
+      "split": "train_pool",
+      "n_families": 41,
+      "accuracy": 0.8536585365853658,
+      "mean_regret_colors": 0.06219512195121942,
+      "regret_pct": 0.45867434121773487,
+      "mean_always_rlf_regret": 0.06219512195121942,
+      "mean_always_dsatur_regret": 0.6365853658536585
+    },
+    "val": {
+      "split": "val",
+      "n_families": 7,
+      "accuracy": 0.8571428571428571,
+      "mean_regret_colors": 0.0571428571428572,
+      "regret_pct": 0.7233273056057873,
+      "mean_always_rlf_regret": 0.0571428571428572,
+      "mean_always_dsatur_regret": 0.2857142857142857
+    },
+    "test_interp": {
+      "split": "test_interp",
+      "n_families": 7,
+      "accuracy": 0.8571428571428571,
+      "mean_regret_colors": 0.051428571428571476,
+      "regret_pct": 0.4029550033579587,
+      "mean_always_rlf_regret": 0.05428571428571427,
+      "mean_always_dsatur_regret": 0.557142857142857
+    },
+    "test_extrap": {
+      "split": "test_extrap",
+      "n_families": 15,
+      "accuracy": 0.9333333333333333,
+      "mean_regret_colors": 0.0013333333333333049,
+      "regret_pct": 0.008607333448097595,
+      "mean_always_rlf_regret": 0.0,
+      "mean_always_dsatur_regret": 1.6559999999999997
+    },
+    "test_comp": {
+      "split": "test_comp",
+      "n_families": 10,
+      "accuracy": 1.0,
+      "mean_regret_colors": 0.0,
+      "regret_pct": 0.0,
+      "mean_always_rlf_regret": 0.0,
+      "mean_always_dsatur_regret": 0.7819999999999997
+    },
+    "heldout_type": {
+      "split": "heldout_type",
+      "n_families": 26,
+      "accuracy": 0.9615384615384616,
+      "mean_regret_colors": 0.0015384615384616423,
+      "regret_pct": 0.013617484850549026,
+      "mean_always_rlf_regret": 0.0015384615384616423,
+      "mean_always_dsatur_regret": 0.29307692307692296
+    }
+  }
+}

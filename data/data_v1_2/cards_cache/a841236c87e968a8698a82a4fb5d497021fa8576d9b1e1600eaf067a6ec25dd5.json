@@ -1,0 +1,5 @@
+{
+  "card": "interval, nodes 100-200, density 0.35, medium degree variance, moderate clustering",
+  "p_idx": 3,
+  "paraphrase": "Network ensemble with nodes 100-200, density 0.35, medium degree variance, and moderate clustering, generated via interval structure."
+}

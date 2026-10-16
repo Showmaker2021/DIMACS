@@ -1,0 +1,5 @@
+{
+  "card": "scale-free, nodes 100-200, density 0.06, high degree variance, moderate clustering",
+  "p_idx": 1,
+  "paraphrase": "Graph instances belonging to the scale_free family, characterized by size nodes 100-200 at density 0.06, with high degree variance and moderate clustering."
+}
