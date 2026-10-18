@@ -6,9 +6,9 @@
 
 ## MỤC LỤC
 1. [Yêu cầu Môi trường & Cài đặt](#1-yêu-cầu-môi-trường--cài-đặt)
-2. [Thiết lập API Key & Chế độ Chi phí (0đ vs Billed)](#2-thiết-lập-api-key--chế-độ-chi-phí)
+2. [Thiết lập API Key & Danh sách Model Hỗ trợ](#2-thiết-lập-api-key--danh-sách-model-hỗ-trợ)
 3. [Quy tắc Bất biến (Frozen Files & Invariants)](#3-quy-tắc-bất-biến-frozen-files--invariants)
-4. [Lộ trình Thực thi Từng Bước (End-to-End Pipeline)](#4-lộ-trình-thực-thi-từng-bước)
+4. [Lộ trình Thực thi Pipeline Chính (End-to-End Method Pipeline)](#4-lộ-trình-thực-thi-pipeline-chính)
    - [Giai đoạn 0: Kiểm thử Hệ thống (System Health Check)](#giai-đoạn-0-kiểm-thử-hệ-thống)
    - [Giai đoạn 1: Chuẩn bị Dữ liệu & Text Cards](#giai-đoạn-1-chuẩn-bị-dữ-liệu--text-cards)
    - [Giai đoạn 2: Tiến hóa Pilot & Báo cáo Gate 2](#giai-đoạn-2-tiến-hóa-pilot--báo-cáo-gate-2)
@@ -17,8 +17,15 @@
    - [Giai đoạn 5: Tinh chỉnh Tăng cường (Sharpening - RL GRPO)](#giai-đoạn-5-tinh-chỉnh-tăng-cường-rl-grpo)
    - [Giai đoạn 6: Đánh giá Offline & Khóa Tập Test](#giai-đoạn-6-đánh-giá-offline--khóa-tập-test)
    - [Giai đoạn 7: Phân tích Chi phí Hòa vốn & Xuất Bảng Bài báo](#giai-đoạn-7-phân-tích-chi-phí-hòa-vốn--xuất-bảng-bài-báo)
-5. [Chế độ Chạy Mock / Test Nhanh (Không tốn API, Không cần GPU)](#5-chế-độ-chạy-mock--test-nhanh)
-6. [Xử lý Sự cố Thường gặp (Troubleshooting & FAQs)](#6-xử-lý-sự-cố-thường-gặp)
+5. [Hướng Dẫn Chạy Toàn Bộ Các Baselines Đối Chứng](#5-hướng-dẫn-chạy-toàn-bộ-các-baselines-đối-chứng)
+   - [5.1. Baselines Kinh Điển: DSATUR, RLF và Cận Oracle R(F)](#51-baselines-kinh-điển-dsatur-rlf-và-cận-oracle-rf)
+   - [5.2. Baselines Tối Ưu Tham Số: CMA-ES Tuning & Heuristic Đơn Định](#52-baselines-tối-ưu-tham-số-cma-es-tuning--heuristic-đơn-định)
+   - [5.3. Baseline Bộ Phân Loại Thuộc Tính: D7 Classifier Selector](#53-baseline-bộ-phân-loại-thuộc-tính-d7-classifier-selector)
+   - [5.4. Baselines Tiến Hóa Bằng LLM: EoH và ReEvo (LLM4AD Adapter)](#54-baselines-tiến-hóa-bằng-llm-eoh-và-reevo-llm4ad-adapter)
+   - [5.5. Baseline Zero-shot LLM Chưa Fine-tune: Arm A0 (Base Qwen-7B)](#55-baseline-zero-shot-llm-chưa-fine-tune-arm-a0-base-qwen-7b)
+   - [5.6. Baseline Phân Tích Điều Kiện: Arm A6 (Shuffled / Ablated Cards)](#56-baseline-phân-tích-điều-kiện-arm-a6-shuffled--ablated-cards)
+6. [Chế độ Chạy Mock / Test Nhanh (Không tốn API, Không cần GPU)](#6-chế-độ-chạy-mock--test-nhanh)
+7. [Xử lý Sự cố Thường gặp (Troubleshooting & FAQs)](#7-xử-lý-sự-cố-thường-gặp)
 
 ---
 
@@ -290,7 +297,139 @@ Mục tiêu: Đóng gói toàn bộ số liệu thành các bảng biểu chuẩ
 
 ---
 
-## 5. Chế độ Chạy Mock / Test Nhanh
+## 5. Hướng Dẫn Chạy Toàn Bộ Các Baselines Đối Chứng
+
+Để đảm bảo tính khoa học và thuyết phục tuyệt đối cho bài báo IJCAI, phương pháp đề xuất (SFT LoRA $\to$ GRPO Sharpening) phải được so sánh toàn diện với **6 nhóm baselines đối chứng**:
+
+---
+
+### 5.1. Baselines Kinh Điển: DSATUR, RLF và Cận Oracle R(F)
+
+- **Bản chất giải thuật:**
+  - **DSATUR (Brélaz, 1979):** Heuristic tham lam tô đỉnh có độ bão hòa màu lớn nhất (`sat`), giải hòa bằng số bậc chưa tô (`uncolored_deg`). Được cài đặt bằng mã máy Numba tối ưu (`evaluator.coloring.dsatur`).
+  - **RLF (Leighton, 1979):** Thuật toán Recursive Largest First, xây dựng từng tập độc lập cực đại (`evaluator.coloring.rlf`).
+  - **Cận Oracle Reference $R(F)$:** Xác định cận lý thuyết thực nghiệm bằng cách lấy điểm tốt nhất giữa DSATUR và RLF trên từng đồ thị:
+    $$R(G) = \min(\text{colors}_{\text{DSATUR}}(G), \text{colors}_{\text{RLF}}(G)), \quad R(F) = \frac{1}{|F|}\sum_{G \in F} R(G)$$
+- **Cách thẩm định và chạy kiểm thử:**
+  Chạy kiểm tra trực tiếp qua Python hoặc chạy test suite đánh giá:
+  ```bash
+  # Kiểm tra độ chính xác và tốc độ DSATUR vs RLF trên 1 họ đồ thị:
+  python -c "from evaluator.coloring import dsatur, rlf; from evaluator.verify import verify, count_colors; from graphs.families import get_family; f = get_family('gnp_d0.30_n100-200'); g = f.gen(2000); c_ds = dsatur(g); c_rl = rlf(g); print('Valid DSATUR:', verify(g, c_ds), 'Colors:', count_colors(c_ds)); print('Valid RLF:', verify(g, c_rl), 'Colors:', count_colors(c_rl))"
+
+  # Chạy toàn bộ test suite kiểm tra tính đúng đắn của evaluator:
+  pytest tests/test_evaluator.py -v
+  ```
+- **File mã nguồn liên quan:** [`evaluator/coloring.py`](evaluator/coloring.py), [`evaluator/verify.py`](evaluator/verify.py).
+
+---
+
+### 5.2. Baselines Tối Ưu Tham Số: CMA-ES Tuning & Heuristic Đơn Định
+
+- **Bản chất giải thuật:**
+  Khảo sát không gian trọng số liên tục của hàm tham số DSATUR mở rộng với 5 trọng số:
+  $$S(v) = w_1 \cdot \text{sat} + w_2 \cdot \text{deg} + w_3 \cdot \text{uncolored\_deg} + w_4 \cdot \frac{\text{sat}}{\max(1, \max \text{sat})} + w_5 \cdot \frac{\text{uncolored\_deg}}{\max(1, \max \text{uncolored\_deg})}$$
+  - **Universal Parametric:** 1 bộ trọng số cố định tối ưu chung cho toàn bộ tập train của tất cả các họ.
+  - **Family-tuned Parametric:** Tối ưu riêng 1 bộ trọng số cho từng họ bằng thuật toán tiến hóa liên tục CMA-ES (`cma`).
+- **Lệnh chạy:**
+  ```bash
+  # 1. Chạy Gate 1 & CMA-ES Parametric tuning cho toàn bộ các họ đồ thị:
+  python scripts/run_gate.py
+
+  # 2. Chạy nghiên cứu kiểm chứng D1-prime (tính ổn định tham số trên các biến thể):
+  python scripts/run_d1_prime.py
+
+  # 3. Chạy baseline D6 (đánh giá không gian đặc trưng mở rộng):
+  python scripts/run_d6_and_eval.py
+  ```
+- **Kết quả đầu ra:** `results/gate_table.csv`, `runs/d1_prime/results.json`, `runs/d6/results.json`. Báo cáo chứng minh khoảng trống Gap A giữa Heuristic đơn định và Per-family tuning.
+
+---
+
+### 5.3. Baseline Bộ Phân Loại Thuộc Tính: D7 Classifier Selector
+
+- **Bản chất giải thuật:**
+  Đại diện cho trường phái **Algorithm Selection** truyền thống (Rice, 1976). Thay vì sinh hàm ưu tiên mới, baseline D7 huấn luyện bộ phân loại (Logistic Regression L2-regularized và Decision Tree) trên 4 đặc trưng thống kê của đồ thị:
+  $$x = [n, \text{density}, \text{deg\_variance}, \text{clustering}]$$
+  Bộ phân loại dự đoán thuật toán tốt nhất trong tập cố định $\{\text{DSATUR}, \text{RLF}\}$ cho từng họ mà không tốn chi phí gọi LLM.
+- **Lệnh chạy:**
+  ```bash
+  python baselines/d7_classifier.py --splits-path data/data_v1_2/splits.json --out-dir runs/baselines/d7
+  ```
+- **Kết quả đầu ra:**
+  - `runs/baselines/d7/summary.md`: Bảng độ chính xác (Accuracy) và độ hối tiếc (Regret vs $R(F)$) trên từng split.
+  - `runs/baselines/d7/summary.json`: Dữ liệu số liệu chi tiết phục vụ bảng tổng hợp.
+  - *Ý nghĩa khoa học:* D7 chỉ đạt độ hối tiếc $0.086$ màu so với $R(F)$, đặt ra cột mốc cạnh tranh trực tiếp mà mô hình sinh code LLM phải vượt qua.
+
+---
+
+### 5.4. Baselines Tiến Hóa Bằng LLM: EoH và ReEvo (LLM4AD Adapter)
+
+- **Bản chất giải thuật:**
+  Mô phỏng 2 framework tìm kiếm giải thuật tự động qua LLM tiên tiến nhất hiện nay:
+  - **EoH (Evolution of Heuristics - FeiLiu36):** Tiến hóa quần thể bằng các toán tử đột biến và lai ghép code qua LLM.
+  - **ReEvo (Reflective Evolution - ai4co):** Tiến hóa phản tư, dùng LLM đóng vai trò Critic đánh giá lỗi code và gợi ý hướng cải tiến giải thuật.
+  - Cả hai đều được chuẩn hóa qua giao diện [`baselines/llm4ad_task.py`](baselines/llm4ad_task.py), chia sẻ cùng 4 tầng Sandbox bảo mật và cùng ngân sách (budget $50 \div 200$ calls) như pipeline chính.
+- **Lệnh chạy:**
+  ```bash
+  # 1. Chạy EoH cho 1 họ đồ thị (Chế độ Mock kiểm tra nhanh):
+  python baselines/run_eoh.py --family kpart_k10_p0.3_n100-200 --budget 50 --mock
+
+  # Chạy EoH với model DeepSeek / Gemini (sau khi nạp API key):
+  python baselines/run_eoh.py --family kpart_k10_p0.3_n100-200 --budget 50 --model deepseek-chat
+
+  # 2. Chạy ReEvo cho 1 họ đồ thị (Chế độ Mock kiểm tra nhanh):
+  python baselines/run_reevo.py --family kpart_k10_p0.3_n100-200 --budget 50 --mock
+
+  # Chạy ReEvo với model DeepSeek / Gemini:
+  python baselines/run_reevo.py --family kpart_k10_p0.3_n100-200 --budget 50 --model deepseek-chat
+  ```
+- **Kết quả đầu ra:** `runs/baselines/eoh/{family}/history.json` và `runs/baselines/reevo/{family}/history.json`.
+
+---
+
+### 5.5. Baseline Zero-shot LLM Chưa Fine-tune: Arm A0 (Base Qwen-7B)
+
+- **Bản chất giải thuật:**
+  Cung cấp trực tiếp Text Card của họ đồ thị vào mô hình nền nguyên bản `Qwen/Qwen2.5-Coder-7B-Instruct` (Zero-shot) để sinh code priority trong 1 lần gọi mà **không qua bất kỳ bước huấn luyện SFT hay RL nào**.
+- **Mục đích:**
+  Đo lường năng lực giải thuật tự thân của LLM mạnh nhất dòng code 7B hiện nay khi chưa được chưng cất tri thức chuyên biệt.
+- **Lệnh chạy:**
+  ```bash
+  # Chạy đánh giá Zero-shot trên tập test nội suy (test_interp):
+  python eval/eval_model.py \
+      --backend hf \
+      --model-name Qwen/Qwen2.5-Coder-7B-Instruct \
+      --split test_interp \
+      --k 1 \
+      --n-samples 1 \
+      --run-id eval_a0_base_qwen
+  ```
+  *(Khi chạy thử trên máy cá nhân không GPU, dùng `--backend mock --model-name mock-model`).*
+- **Kết quả đầu ra:** `runs/eval/eval_a0_base_qwen/summary.json` và `per_card.jsonl` (Thực tế ghi nhận A0 có tỷ lệ code lỗi/vi phạm cao, số màu trung bình kém hơn DSATUR khoảng $2.36\%$).
+
+---
+
+### 5.6. Baseline Phân Tích Điều Kiện: Arm A6 (Shuffled / Ablated Cards)
+
+- **Bản chất giải thuật:**
+  Thử nghiệm kiểm chứng giả thuyết (Ablation Study): Sau khi mô hình đã được huấn luyện đầy đủ (SFT + GRPO), ta cố tình cấp cho mô hình các thẻ text card bị tráo ngẫu nhiên (sử dụng cặp đối tác `shuffle_partner_far` hoặc `shuffle_partner_near` đã được tính toán bất biến trong metadata `data/data_v1_1/families_v1_1.json`). Tức là mô hình nhận mô tả của họ $A$ nhưng hàm priority sinh ra lại được đem đi chấm điểm trên đồ thị của họ $B$.
+- **Mục đích:**
+  Chứng minh mô hình thực sự **học cách điều kiện hóa theo cấu trúc đồ thị** (Conditioning) chứ không chỉ đơn thuần học vẹt ghi nhớ một phiên bản DSATUR tổng quát chung.
+- **Lệnh chạy:**
+  ```bash
+  python eval/eval_model.py \
+      --backend hf \
+      --model-name runs/train/grpo_a3_model \
+      --split test_interp \
+      --k 1 \
+      --n-samples 1 \
+      --run-id eval_a6_shuffled_card
+  ```
+- **Kết quả đầu ra:** `runs/eval/eval_a6_shuffled_card/summary.json`. Khi nhận card sai, số màu tiết kiệm của mô hình lập tức suy giảm rõ rệt, khẳng định vai trò sống còn của Text Card.
+
+---
+
+## 6. Chế độ Chạy Mock / Test Nhanh (Không tốn API, Không cần GPU)
 
 Nếu bạn muốn kiểm tra xem toàn bộ các script có kết nối thông suốt với nhau trên máy cá nhân (không GPU, không tốn tiền API), chỉ cần chạy chuỗi lệnh sau:
 
@@ -317,7 +456,7 @@ Toàn bộ chuỗi lệnh trên chạy hoàn tất trong vòng **dưới 1 phút
 
 ---
 
-## 6. Xử lý Sự cố Thường gặp (Troubleshooting & FAQs)
+## 7. Xử lý Sự cố Thường gặp (Troubleshooting & FAQs)
 
 | Hiện tượng | Nguyên nhân | Cách khắc phục |
 |---|---|---|
