@@ -122,11 +122,13 @@ def call_llm_with_retry(
         api_key = os.environ.get("GEMINI_API_KEY")
     elif "deepseek" in model.lower():
         api_key = os.environ.get("DEEPSEEK_API_KEY")
+    elif "gpt" in model.lower() or "openai" in model.lower():
+        api_key = os.environ.get("OPENAI_API_KEY")
     else:
         api_key = os.environ.get("ANTHROPIC_API_KEY")
 
     if not api_key:
-        raise ValueError(f"API key missing in environment for model '{model}'. Set GEMINI_API_KEY, DEEPSEEK_API_KEY, or ANTHROPIC_API_KEY.")
+        raise ValueError(f"API key missing in environment for model '{model}'. Set GEMINI_API_KEY, DEEPSEEK_API_KEY, OPENAI_API_KEY, or ANTHROPIC_API_KEY.")
 
     attempts = 0
     last_err = None
@@ -164,8 +166,8 @@ def call_llm_with_retry(
                 cost = (usage["prompt_tokens"] * p_in + usage["completion_tokens"] * p_out) / 1_000_000.0
                 return code, usage, cost, attempts
 
-            elif "deepseek" in model.lower():
-                url = "https://api.deepseek.com/chat/completions"
+            elif "deepseek" in model.lower() or "gpt" in model.lower() or "openai" in model.lower():
+                url = "https://api.deepseek.com/chat/completions" if "deepseek" in model.lower() else "https://api.openai.com/v1/chat/completions"
                 headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
                 payload = {
                     "model": model,

@@ -14,8 +14,10 @@ from typing import Dict, List, Tuple, Any, Optional
 
 import numpy as np
 
-# Add project root to sys.path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Add project root and LLM4AD to sys.path
+root_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(root_dir))
+sys.path.insert(0, str(root_dir / "LLM4AD"))
 
 from gate.dataset import load_family, families
 from gate.evolved.sandbox import evaluate_candidate_safe
@@ -27,11 +29,11 @@ try:
 except ImportError:
     class BaseEvaluation:
         """Fallback base Evaluation class compatible with LLM4AD interface."""
-        def __init__(self, template_program: str = "", task_description: str = ""):
+        def __init__(self, template_program: str = "", task_description: str = "", **kwargs):
             self.template_program = template_program
             self.task_description = task_description
 
-        def evaluate_program(self, program: str) -> Any:
+        def evaluate_program(self, program: str, callable_func: Any = None, **kwargs) -> Any:
             raise NotImplementedError("evaluate_program must be implemented by subclass.")
 
 
@@ -97,10 +99,12 @@ class GraphColoringEvaluation(BaseEvaluation):
         super().__init__(
             template_program=TEMPLATE_PROGRAM,
             task_description=task_desc,
+            exec_code=False,
+            safe_evaluate=False,
         )
         self.last_result: Optional[Dict[str, Any]] = None
 
-    def evaluate_program(self, program: str) -> Optional[float]:
+    def evaluate_program(self, program: str, callable_func: Any = None, **kwargs) -> Optional[float]:
         """Evaluate program through the project's 4-layer sandbox.
         
         Returns:

@@ -1,0 +1,34 @@
+{
+  "family_id": "interval_L0.10_n100-200",
+  "role": "control",
+  "rf_name": "RLF",
+  "mean_top1": 23.95,
+  "mean_dsatur": 23.95,
+  "mean_rlf": 23.95,
+  "mean_rf": 23.95,
+  "val_mean_top1": 13.0,
+  "gap_vs_rf_pct": 0.0,
+  "gap_vs_rf_ci": [
+    0.0,
+    0.0
+  ],
+  "gap_vs_rf_colors": 0.0,
+  "gap_vs_rf_colors_ci": [
+    0.0,
+    0.0
+  ],
+  "gap_vs_dsatur_pct": 0.0,
+  "gap_vs_dsatur_ci": [
+    0.0,
+    0.0
+  ],
+  "p_wilcoxon": 1.0,
+  "behavioral_probe": {
+    "equal_dsatur": true,
+    "equal_rlf": true
+  },
+  "valid_rate": 1.0,
+  "total_calls": 20,
+  "fail_counts": {},
+  "status": "FAIL"
+}

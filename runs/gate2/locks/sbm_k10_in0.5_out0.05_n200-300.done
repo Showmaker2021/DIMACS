@@ -1,0 +1,34 @@
+{
+  "family_id": "sbm_k10_in0.5_out0.05_n200-300",
+  "role": "target",
+  "rf_name": "RLF",
+  "mean_top1": 10.005,
+  "mean_dsatur": 10.005,
+  "mean_rlf": 9.375,
+  "mean_rf": 9.375,
+  "val_mean_top1": 13.0,
+  "gap_vs_rf_pct": -6.72,
+  "gap_vs_rf_ci": [
+    -7.671677392469491,
+    -5.754987007171232
+  ],
+  "gap_vs_rf_colors": -0.63,
+  "gap_vs_rf_colors_ci": [
+    -0.715,
+    -0.54
+  ],
+  "gap_vs_dsatur_pct": 0.0,
+  "gap_vs_dsatur_ci": [
+    0.0,
+    0.0
+  ],
+  "p_wilcoxon": 1.0,
+  "behavioral_probe": {
+    "equal_dsatur": true,
+    "equal_rlf": false
+  },
+  "valid_rate": 1.0,
+  "total_calls": 20,
+  "fail_counts": {},
+  "status": "FAIL"
+}

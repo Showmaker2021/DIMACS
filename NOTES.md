@@ -390,3 +390,9 @@ Partition of the 106 existing dataset families in `data/data_v1_2/splits.json`:
   - Frozen selection saved to `results/selections/kpart_k10_p0.3_n100-200.json`.
 - Test suite integrity: **193/193 unit and integration tests passing (100% green in 2m33s)**.
 - Cryptographic file integrity: `data/data_v1/`, `data/data_v1_1/`, and `evaluator/verify.py` remain untouched.
+
+## Repository Cleanup & Refactoring (October 2026)
+- **Stray & Scratch Scripts Removed**: Cleaned up 14 obsolete debug, exploratory, and duplicate scripts from `scripts/` (including duplicate `scripts/test_adversarial_m1.py`, `pilot_test.py`, `pilot_final.py`, `smoke_report.py`, `run_dryrun.py`, etc.).
+- **Internal Artifacts Removed**: Removed temporary `.agents/` teamwork preview logs and `ORIGINAL_REQUEST.md`.
+- **Clean Scripts Directory (14 files remaining)**: `build_splits.py`, `build_teacher_data.py`, `build_v1_1_metadata.py`, `filter_sft_data.py`, `gate2_report.py`, `make_all_figures.py`, `make_cards.py`, `pilot_evolve.py`, `smoke.py`, `run_gate.py`, and the baseline experiment runners (`run_d1_prime.py`, `run_d6_and_eval.py`, `run_diagnostics.py`, `run_val_diagnostics.py`).
+- **Integrity & Test Suite**: All 193 unit & integration tests remain 100% GREEN. Frozen files (`data/data_v1/`, `data/data_v1_1/`, `evaluator/verify.py`) are strictly verified via SHA256.

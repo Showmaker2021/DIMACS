@@ -1,0 +1,217 @@
+{
+  "timestamp": "2026-10-18T10:35:37",
+  "families": {
+    "kpart_k10_p0.3_n100-200": {
+      "family_id": "kpart_k10_p0.3_n100-200",
+      "role": "target",
+      "rf_name": "RLF",
+      "mean_top1": 14.27,
+      "mean_dsatur": 14.27,
+      "mean_rlf": 13.395,
+      "mean_rf": 13.395,
+      "val_mean_top1": 13.0,
+      "gap_vs_rf_pct": -6.532288167226577,
+      "gap_vs_rf_ci": [
+        -7.281553398058252,
+        -5.803028590069587
+      ],
+      "gap_vs_rf_colors": -0.875,
+      "gap_vs_rf_colors_ci": [
+        -0.98,
+        -0.775
+      ],
+      "gap_vs_dsatur_pct": 0.0,
+      "gap_vs_dsatur_ci": [
+        0.0,
+        0.0
+      ],
+      "p_wilcoxon": 1.0,
+      "behavioral_probe": {
+        "equal_dsatur": true,
+        "equal_rlf": false
+      },
+      "valid_rate": 1.0,
+      "total_calls": 20,
+      "fail_counts": {},
+      "status": "FAIL"
+    },
+    "gnp_d0.30_n100-200": {
+      "family_id": "gnp_d0.30_n100-200",
+      "role": "target",
+      "rf_name": "RLF",
+      "mean_top1": 15.56,
+      "mean_dsatur": 15.56,
+      "mean_rlf": 14.545,
+      "mean_rf": 14.545,
+      "val_mean_top1": 13.0,
+      "gap_vs_rf_pct": -6.978343073221037,
+      "gap_vs_rf_ci": [
+        -7.655176556932656,
+        -6.311494920785836
+      ],
+      "gap_vs_rf_colors": -1.015,
+      "gap_vs_rf_colors_ci": [
+        -1.115,
+        -0.915
+      ],
+      "gap_vs_dsatur_pct": 0.0,
+      "gap_vs_dsatur_ci": [
+        0.0,
+        0.0
+      ],
+      "p_wilcoxon": 1.0,
+      "behavioral_probe": {
+        "equal_dsatur": true,
+        "equal_rlf": false
+      },
+      "valid_rate": 1.0,
+      "total_calls": 20,
+      "fail_counts": {},
+      "status": "FAIL"
+    },
+    "sbm_k10_in0.5_out0.05_n200-300": {
+      "family_id": "sbm_k10_in0.5_out0.05_n200-300",
+      "role": "target",
+      "rf_name": "RLF",
+      "mean_top1": 10.005,
+      "mean_dsatur": 10.005,
+      "mean_rlf": 9.375,
+      "mean_rf": 9.375,
+      "val_mean_top1": 13.0,
+      "gap_vs_rf_pct": -6.72,
+      "gap_vs_rf_ci": [
+        -7.671677392469491,
+        -5.754987007171232
+      ],
+      "gap_vs_rf_colors": -0.63,
+      "gap_vs_rf_colors_ci": [
+        -0.715,
+        -0.54
+      ],
+      "gap_vs_dsatur_pct": 0.0,
+      "gap_vs_dsatur_ci": [
+        0.0,
+        0.0
+      ],
+      "p_wilcoxon": 1.0,
+      "behavioral_probe": {
+        "equal_dsatur": true,
+        "equal_rlf": false
+      },
+      "valid_rate": 1.0,
+      "total_calls": 20,
+      "fail_counts": {},
+      "status": "FAIL"
+    },
+    "ws_k10_p0.1_n100-200": {
+      "family_id": "ws_k10_p0.1_n100-200",
+      "role": "target",
+      "rf_name": "DSATUR",
+      "mean_top1": 7.125,
+      "mean_dsatur": 7.125,
+      "mean_rlf": 6.97,
+      "mean_rf": 7.125,
+      "val_mean_top1": 13.0,
+      "gap_vs_rf_pct": 0.0,
+      "gap_vs_rf_ci": [
+        0.0,
+        0.0
+      ],
+      "gap_vs_rf_colors": 0.0,
+      "gap_vs_rf_colors_ci": [
+        0.0,
+        0.0
+      ],
+      "gap_vs_dsatur_pct": 0.0,
+      "gap_vs_dsatur_ci": [
+        0.0,
+        0.0
+      ],
+      "p_wilcoxon": 1.0,
+      "behavioral_probe": {
+        "equal_dsatur": true,
+        "equal_rlf": false
+      },
+      "valid_rate": 1.0,
+      "total_calls": 20,
+      "fail_counts": {},
+      "status": "FAIL"
+    },
+    "interval_L0.10_n100-200": {
+      "family_id": "interval_L0.10_n100-200",
+      "role": "control",
+      "rf_name": "RLF",
+      "mean_top1": 23.95,
+      "mean_dsatur": 23.95,
+      "mean_rlf": 23.95,
+      "mean_rf": 23.95,
+      "val_mean_top1": 13.0,
+      "gap_vs_rf_pct": 0.0,
+      "gap_vs_rf_ci": [
+        0.0,
+        0.0
+      ],
+      "gap_vs_rf_colors": 0.0,
+      "gap_vs_rf_colors_ci": [
+        0.0,
+        0.0
+      ],
+      "gap_vs_dsatur_pct": 0.0,
+      "gap_vs_dsatur_ci": [
+        0.0,
+        0.0
+      ],
+      "p_wilcoxon": 1.0,
+      "behavioral_probe": {
+        "equal_dsatur": true,
+        "equal_rlf": true
+      },
+      "valid_rate": 1.0,
+      "total_calls": 20,
+      "fail_counts": {},
+      "status": "FAIL"
+    },
+    "ba_m12_n200-300": {
+      "family_id": "ba_m12_n200-300",
+      "role": "control",
+      "rf_name": "DSATUR",
+      "mean_top1": 9.13,
+      "mean_dsatur": 9.13,
+      "mean_rlf": 9.795,
+      "mean_rf": 9.13,
+      "val_mean_top1": 13.0,
+      "gap_vs_rf_pct": 0.0,
+      "gap_vs_rf_ci": [
+        0.0,
+        0.0
+      ],
+      "gap_vs_rf_colors": 0.0,
+      "gap_vs_rf_colors_ci": [
+        0.0,
+        0.0
+      ],
+      "gap_vs_dsatur_pct": 0.0,
+      "gap_vs_dsatur_ci": [
+        0.0,
+        0.0
+      ],
+      "p_wilcoxon": 1.0,
+      "behavioral_probe": {
+        "equal_dsatur": true,
+        "equal_rlf": false
+      },
+      "valid_rate": 1.0,
+      "total_calls": 20,
+      "fail_counts": {},
+      "status": "FAIL"
+    }
+  },
+  "summary": {
+    "gate_decision": "FAIL",
+    "target_pass_count": 0,
+    "target_marginal_count": 0,
+    "all_valid_rates_100": true,
+    "threshold_pass": 1.0,
+    "threshold_marginal": 0.5
+  }
+}
