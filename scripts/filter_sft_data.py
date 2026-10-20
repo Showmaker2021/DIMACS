@@ -177,7 +177,7 @@ def filter_and_build_sft_dataset(
 
 def main():
     parser = argparse.ArgumentParser(description="Filter and partition teacher data into SFT format")
-    parser.add_argument("--records-path", default="runs/teacher/dataset_v1/records.jsonl", help="Source records.jsonl")
+    parser.add_argument("--records-path", "--input", dest="records_path", default="runs/teacher/dataset_v1/records.jsonl", help="Source records.jsonl")
     parser.add_argument("--out-dir", default="data/sft", help="Output SFT directory")
     parser.add_argument("--val-ratio", type=float, default=0.15, help="Validation ratio by card")
     parser.add_argument("--seed", type=int, default=42, help="Split seed")

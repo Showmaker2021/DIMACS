@@ -121,6 +121,20 @@ def build_teacher_dataset(
                                     except Exception:
                                         pass
 
+            # Also check results/pilot_candidates.jsonl (default pilot log)
+            p_pilot = Path("results/pilot_candidates.jsonl")
+            if p_pilot.exists():
+                with open(p_pilot, "r", encoding="utf-8") as f_pilot:
+                    for line in f_pilot:
+                        line = line.strip()
+                        if line:
+                            try:
+                                c_data = json.loads(line)
+                                if c_data.get("family_id") == fam_id and c_data.get("code") and c_data.get("status") == "ok":
+                                    candidates.append(c_data)
+                            except Exception:
+                                pass
+
             if not candidates and mock:
                 # Mock candidates for fast verification
                 for i in range(5):
@@ -183,6 +197,8 @@ def build_teacher_dataset(
                         role = "win"
                     elif abs(gap_rf_pct) <= 0.5:
                         role = "tie"
+                    elif mock:
+                        role = "tie"
                     else:
                         role = "loss"
 
@@ -242,9 +258,13 @@ def main():
     parser.add_argument("--cards-path", default="data/data_v1_2/cards.json", help="Cards catalog path")
     parser.add_argument("--out-dir", default="runs/teacher/dataset_v1", help="Output directory")
     parser.add_argument("--mock", action="store_true", help="Generate mock teacher records if none exist")
+    parser.add_argument("--families", default=None, help="Comma-separated family IDs to process (default: all)")
     args = parser.parse_args()
 
+    fam_list = [f.strip() for f in args.families.split(",")] if args.families else None
+
     build_teacher_dataset(
+        families_list=fam_list,
         cards_path=args.cards_path,
         out_dir=args.out_dir,
         mock=args.mock,
