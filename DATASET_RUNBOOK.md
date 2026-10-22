@@ -134,10 +134,11 @@ python scripts/build_teacher_data.py --out-dir runs/teacher/dataset_v1
 ```
 *File sinh ra:* `runs/teacher/dataset_v1/records.jsonl` và `summary.json`.
 
-### Bước 4.4: Lọc và xuất tập SFT
+### Bước 4.4: Lọc và xuất tập SFT chuẩn (~2,500 mẫu)
 ```bash
-python scripts/filter_sft_data.py --records-path runs/teacher/dataset_v1/records.jsonl --out-dir data/sft --val-ratio 0.15
+python scripts/build_full_sft_dataset.py --target-samples 2500 --out-dir data/sft
 ```
+*Cơ chế tự động:* Script sẽ tự động lấy các thuật toán đã tiến hóa thành công của Gemini, kết hợp với bộ Paraphrases đa dạng và các biến thể cú pháp AST của 106 họ để xuất ra đủ **~2,500 mẫu SFT** chuẩn chỉnh.
 
 ---
 

@@ -104,15 +104,17 @@ def main():
         cmd_teacher.append("--mock")
     run_cmd(cmd_teacher, "4/5 Harvesting Teacher Data, Fingerprint Dedup & Clean Rescoring")
 
-    # 5. Filter & Build Final SFT Datasets
+    # 5. Synthesize Full SFT Dataset with Data Amplification (~2,500 samples)
     run_cmd(
         [
-            python_exe, "scripts/filter_sft_data.py",
-            "--records-path", "runs/teacher/dataset_v1/records.jsonl",
+            python_exe, "scripts/build_full_sft_dataset.py",
+            "--teacher-records", "runs/teacher/dataset_v1/records.jsonl",
+            "--cards-path", "data/data_v1_2/cards.json",
             "--out-dir", args.out_dir,
+            "--target-samples", "2500",
             "--val-ratio", "0.15",
         ],
-        f"5/5 Filtering & Formatting SFT Datasets ({args.out_dir})"
+        f"5/5 Synthesizing Full SFT Dataset (~2,500 samples) in {args.out_dir}"
     )
 
     print("\n" + "#"*70)
