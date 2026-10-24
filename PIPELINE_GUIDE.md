@@ -4,6 +4,15 @@
 
 ---
 
+
+> [!TIP]
+> **Các tài liệu thực thi nhanh (Runbooks) dành riêng cho từng thành viên:**
+> -  **Sinh dữ liệu SFT:** Xem sổ tay thực thi nhanh tại [DATASET_RUNBOOK.md](DATASET_RUNBOOK.md)
+> -  **Huấn luyện GPU / Fine-tune:** Xem sổ tay thực thi nhanh tại [TRAINING_RUNBOOK.md](TRAINING_RUNBOOK.md)
+> -  **Chiến lược & Cơ sở khoa học:** Xem phân tích mẫu tại [DATASET_PREPARATION_GUIDE.md](DATASET_PREPARATION_GUIDE.md)
+
+---
+
 ## MỤC LỤC
 1. [Yêu cầu Môi trường & Cài đặt](#1-yêu-cầu-môi-trường--cài-đặt)
 2. [Thiết lập API Key & Danh sách Model Hỗ trợ](#2-thiết-lập-api-key--danh-sách-model-hỗ-trợ)
