@@ -301,7 +301,8 @@ def color_graph_with_priority(
     adj: np.ndarray,
     compiled_code: Any,
     per_graph_timeout: float,
-) -> Tuple[Optional[np.ndarray], Optional[str]]:
+    return_order: bool = False,
+) -> Tuple[Optional[np.ndarray], Optional[str], Optional[List[int]]]:
     """Greedy color a graph, re-executing in a completely fresh namespace before EVERY call to priority."""
     n = adj.shape[0]
     deg = adj.sum(axis=1).astype(np.int64)
@@ -311,6 +312,7 @@ def color_graph_with_priority(
     uncolored_deg = deg.copy()
     nb_has_color = np.zeros((n, max_k), dtype=bool)
     uncolored = np.ones(n, dtype=bool)
+    order = [] if return_order else None
 
     adj_ro = adj.view()
     adj_ro.flags.writeable = False
@@ -319,7 +321,7 @@ def color_graph_with_priority(
 
     for step in range(n):
         if time.perf_counter() - t_start > per_graph_timeout:
-            return None, f"Per-graph timeout exceeded ({per_graph_timeout:.3f}s)"
+            return (None, f"Per-graph timeout exceeded ({per_graph_timeout:.3f}s)", order) if return_order else (None, f"Per-graph timeout exceeded ({per_graph_timeout:.3f}s)")
 
         colors_ro = colors.view()
         colors_ro.flags.writeable = False
@@ -341,24 +343,26 @@ def color_graph_with_priority(
             priority_fn = call_ns["priority"]
             scores = priority_fn(adj_ro, colors_ro, sat_ro, deg_ro, uncolored_deg_ro)
         except MemoryError as e:
-            return None, f"Memory limit exceeded (MemoryError: {str(e)})"
+            return (None, f"Memory limit exceeded (MemoryError: {str(e)})", order) if return_order else (None, f"Memory limit exceeded (MemoryError: {str(e)})")
         except ValueError as e:
             if "read-only" in str(e).lower() or "assignment destination is read-only" in str(e).lower():
-                return None, "Input mutation detected: function attempted to modify read-only inputs"
-            return None, f"ValueError: {str(e)}"
+                return (None, "Input mutation detected: function attempted to modify read-only inputs", order) if return_order else (None, "Input mutation detected: function attempted to modify read-only inputs")
+            return (None, f"ValueError: {str(e)}", order) if return_order else (None, f"ValueError: {str(e)}")
         except Exception as e:
-            return None, f"Runtime error in priority function: {type(e).__name__}: {str(e)}"
+            return (None, f"Runtime error in priority function: {type(e).__name__}: {str(e)}", order) if return_order else (None, f"Runtime error in priority function: {type(e).__name__}: {str(e)}")
 
         if not isinstance(scores, np.ndarray) or scores.shape != (n,):
-            return None, f"Scores must be 1D numpy array of shape ({n},)"
+            return (None, f"Scores must be 1D numpy array of shape ({n},)", order) if return_order else (None, f"Scores must be 1D numpy array of shape ({n},)")
 
         masked_scores = np.where(uncolored, scores, -np.inf)
         max_score = np.max(masked_scores)
         if not np.isfinite(max_score):
-            return None, "All uncolored vertex scores are non-finite (NaN or -Inf)"
+            return (None, "All uncolored vertex scores are non-finite (NaN or -Inf)", order) if return_order else (None, "All uncolored vertex scores are non-finite (NaN or -Inf)")
 
         candidates = np.flatnonzero(masked_scores == max_score)
         v = int(candidates[0])
+        if return_order:
+            order.append(v)
 
         c = int(np.argmin(nb_has_color[v]))
         colors[v] = c
@@ -371,9 +375,9 @@ def color_graph_with_priority(
         uncolored_deg[neighbors] -= 1
 
     if not verify(adj, colors):
-        return None, "Independent coloring verification failed (invalid coloring)"
+        return (None, "Independent coloring verification failed (invalid coloring)", order) if return_order else (None, "Independent coloring verification failed (invalid coloring)")
 
-    return colors, None
+    return (colors, None, order) if return_order else (colors, None)
 
 
 # ==============================================================================
@@ -442,13 +446,22 @@ def _sandbox_subprocess_target(
     color_counts = []
     tie_break_terms = []
     first_3_hashes = []
+    runtimes = []
+    vertex_orderings = []
 
     for idx, (seed, adj) in enumerate(graphs):
-        colors, err = color_graph_with_priority(adj, compiled_code, per_graph_timeout)
+        t0 = time.perf_counter()
+        colors, err, order = color_graph_with_priority(
+            adj, compiled_code, per_graph_timeout, return_order=True
+        )
+        elapsed_g = time.perf_counter() - t0
+        runtimes.append(elapsed_g)
+
         if err is not None:
             out_queue.put({"success": False, "error": f"Failed on seed {seed}: {err}"})
             return
 
+        vertex_orderings.append(order)
         k = count_colors(colors)
         color_counts.append(k)
 
@@ -464,6 +477,8 @@ def _sandbox_subprocess_target(
     out_queue.put({
         "success": True,
         "color_counts": color_counts,
+        "runtimes": runtimes,
+        "vertex_orderings": vertex_orderings,
         "mean_colors": float(np.mean(color_counts)),
         "mean_tie_break": float(np.mean(tie_break_terms)),
         "behavior_hash": behavior_hash,

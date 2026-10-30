@@ -75,12 +75,20 @@ def evaluate_rollout_group(
     """Evaluate a group of G candidates on the same graph set and return CandidateResult list."""
     t_start = time.perf_counter()
 
-    # Precompute baseline c_base_per_graph on the exact graphs
+    # Precompute baseline c_base_per_graph and t_dsatur on the exact graphs
     adjs = [g[1] for g in graphs]
+    t_dsatur: List[float] = []
+    c_dsatur: List[int] = []
+    for a in adjs:
+        t0_d = time.perf_counter()
+        col = dsatur(a)
+        t_dsatur.append(time.perf_counter() - t0_d)
+        c_dsatur.append(count_colors(col))
+
     if base_alg_name == "RLF":
         c_base = [count_colors(rlf(a)) for a in adjs]
     else:
-        c_base = [count_colors(dsatur(a)) for a in adjs]
+        c_base = c_dsatur
 
     results: List[CandidateResult] = []
     code_cache: Dict[str, Dict[str, Any]] = {}
@@ -105,15 +113,22 @@ def evaluate_rollout_group(
                 status=status,
                 colors_per_graph=[],
                 runtime_per_graph=[],
+                c_base_per_graph=c_base,
+                t_dsatur_per_graph=t_dsatur,
+                code=code,
             )
         else:
             counts = res.get("color_counts", [])
-            # Placeholder per-graph runtime
-            runtimes = [0.01] * len(counts)
+            runtimes = res.get("runtimes", [0.001] * len(counts))
+            orders = res.get("vertex_orderings", None)
             cand_res = CandidateResult(
                 status="ok",
                 colors_per_graph=counts,
                 runtime_per_graph=runtimes,
+                probe_orderings=orders,
+                c_base_per_graph=c_base,
+                t_dsatur_per_graph=t_dsatur,
+                code=code,
             )
 
         results.append(cand_res)

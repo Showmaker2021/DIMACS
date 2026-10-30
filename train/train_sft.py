@@ -77,9 +77,11 @@ def run_sft_training(
         ]
         probe_fams = ["ba_m12_n200-300", "ws_k10_p0.1_n100-200"]
 
+        savings = 0.0
         for step in range(1, 21):
             loss = 1.8 / (1.0 + 0.1 * step)
-            savings = evaluate_sft_probe_savings(sample_codes, probe_fams)
+            if step % probe_interval_steps == 0:
+                savings = evaluate_sft_probe_savings(sample_codes, probe_fams)
             history.append({"step": step, "train_loss": loss, "probe_savings_pct": savings})
             if savings > best_savings:
                 best_savings = savings

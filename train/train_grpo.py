@@ -55,6 +55,7 @@ def run_grpo_training(
         print(f"[MOCK GRPO] Running Arm {arm} on output: {output_dir}")
         rng = np.random.default_rng(seed)
         step_logs = []
+        # Representative fast families strictly from train_pool for mock testing
         target_fams = ["ba_m12_n200-300", "ws_k10_p0.1_n100-200"]
 
         for step in range(1, steps + 1):
@@ -118,8 +119,8 @@ def run_grpo_training(
     # Real GPU GRPO Training Mode
     try:
         import torch
-        from transformers import AutoModelForCausalLM, AutoTokenizer
-        from peft import PeftModel, LoraConfig, get_peft_model
+        from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+        from peft import PeftModel, LoraConfig, get_peft_model, prepare_model_for_kbit_training
     except ImportError as e:
         raise ImportError(f"Missing required dependencies for GRPO training: {e}") from e
 
@@ -127,6 +128,23 @@ def run_grpo_training(
     print(f"Starting real GRPO training on device: {device} (Arm: {arm})")
     if device != "cuda":
         print("[WARNING] CUDA is not available. Real GRPO on CPU will be slow. Use GPU or --mock.")
+
+    use_bf16 = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
+    compute_dtype = torch.bfloat16 if use_bf16 else torch.float16
+
+    # 4-bit QLoRA configuration to fit comfortably within Kaggle T4 16GB VRAM
+    bnb_config = None
+    if device == "cuda":
+        try:
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_compute_dtype=compute_dtype,
+                bnb_4bit_use_double_quant=True,
+            )
+        except Exception as e:
+            print(f"[WARNING] BitsAndBytesConfig init failed: {e}. Falling back to 16-bit.")
+            bnb_config = None
 
     # 1. Load Tokenizer & Model
     adapter_path = Path(model_name)
@@ -138,33 +156,70 @@ def run_grpo_training(
         tokenizer = AutoTokenizer.from_pretrained(str(adapter_path), trust_remote_code=True)
         base_model = AutoModelForCausalLM.from_pretrained(
             base_id,
-            torch_dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16,
+            quantization_config=bnb_config,
+            torch_dtype=compute_dtype,
             device_map="auto" if device == "cuda" else None,
             trust_remote_code=True,
         )
+        if device == "cuda" and bnb_config is not None:
+            base_model = prepare_model_for_kbit_training(base_model)
         model = PeftModel.from_pretrained(base_model, str(adapter_path), is_trainable=True)
     else:
         tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-        model = AutoModelForCausalLM.from_pretrained(
+        base_model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            torch_dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16,
+            quantization_config=bnb_config,
+            torch_dtype=compute_dtype,
             device_map="auto" if device == "cuda" else None,
             trust_remote_code=True,
         )
+        if device == "cuda" and bnb_config is not None:
+            base_model = prepare_model_for_kbit_training(base_model)
+        peft_config = LoraConfig(
+            r=16,
+            lora_alpha=32,
+            lora_dropout=0.05,
+            bias="none",
+            task_type="CAUSAL_LM",
+            target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+        )
+        model = get_peft_model(base_model, peft_config)
 
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
+
+    if hasattr(model, "enable_input_require_grads"):
+        model.enable_input_require_grads()
+    if hasattr(model, "gradient_checkpointing_enable"):
+        model.gradient_checkpointing_enable()
 
     # 2. Setup Optimizer
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-5, weight_decay=0.01)
 
-    # 3. Load Cards Catalog
+    # 3. Load Splits & Cards Catalog (strictly train_pool to avoid data leakage)
+    splits_file = Path("data/data_v1_2/splits.json")
+    train_pool_fams = []
+    if splits_file.exists():
+        with open(splits_file, "r", encoding="utf-8") as f:
+            sp_data = json.load(f)
+        train_pool_fams = [
+            f["family_id"]
+            for f in sp_data.get("splits", {}).get("train_pool", {}).get("families", [])
+        ]
+
     cards_file = Path("data/data_v1_2/cards.json")
     cards_catalog = {}
     if cards_file.exists():
         with open(cards_file, "r", encoding="utf-8") as f:
             cards_catalog = json.load(f)
-    fam_pool = list(cards_catalog.keys()) if cards_catalog else ["ba_m12_n200-300", "ws_k10_p0.1_n100-200"]
+
+    if train_pool_fams:
+        fam_pool = [fid for fid in train_pool_fams if fid in cards_catalog]
+        if not fam_pool:
+            fam_pool = train_pool_fams
+    else:
+        fam_pool = list(cards_catalog.keys()) if cards_catalog else ["ba_m12_n200-300", "ws_k10_p0.1_n100-200"]
 
     from gate.evolved.prompts import build_user_prompt, SYSTEM_PROMPT
     from gate.evolved.loop import extract_code_block
@@ -172,7 +227,7 @@ def run_grpo_training(
 
     rng = np.random.default_rng(seed)
     step_logs = []
-    print(f"Beginning GRPO rollouts across {len(fam_pool)} families for {steps} steps (Group Size G={group_size})...")
+    print(f"Beginning GRPO rollouts across {len(fam_pool)} train_pool families for {steps} steps (Group Size G={group_size})...")
 
     for step in range(1, steps + 1):
         t0 = time.time()
@@ -182,6 +237,7 @@ def run_grpo_training(
 
         prompt = f"[SYSTEM] {SYSTEM_PROMPT}\n[USER]\nTask: write priority(adj, colors, sat, deg, uncolored_deg)\nGraph family: {card_text}\n[ASSISTANT]\n```python\n"
         inputs = tokenizer(prompt, return_tensors="pt").to(device)
+        prompt_len = inputs.input_ids.shape[1]
 
         # Generate G rollout candidates
         model.eval()
@@ -197,7 +253,7 @@ def run_grpo_training(
 
         gen_codes = []
         for out_toks in outputs:
-            gen_text = tokenizer.decode(out_toks[inputs.input_ids.shape[1]:], skip_special_tokens=True)
+            gen_text = tokenizer.decode(out_toks[prompt_len:], skip_special_tokens=True)
             code = extract_code_block("```python\n" + gen_text)
             gen_codes.append(code)
 
@@ -209,19 +265,25 @@ def run_grpo_training(
         rewards = compute_group_rewards(candidates=cand_results, config=cfg, c_base_per_graph=c_base)
         advs = compute_advantages(rewards, eps_std=cfg.eps_std)
 
-        # Policy update step (PPO / GRPO clip loss)
+        # Policy update step (GRPO advantage-weighted loss)
         model.train()
         optimizer.zero_grad()
 
-        # Compute log-probs on generated candidates
+        # Compute log-probs strictly on generated completion tokens (prompt masked out with -100)
         loss_val = 0.0
         for g_idx, adv in enumerate(advs):
             if abs(adv) > 1e-6:
-                full_text = prompt + gen_codes[g_idx]
-                toks = tokenizer(full_text, return_tensors="pt").to(device)
-                out = model(**toks, labels=toks.input_ids)
-                # Policy gradient weighted loss
-                loss = out.loss * float(adv)
+                out_seq = outputs[g_idx].unsqueeze(0)  # Shape (1, seq_len)
+                attn_mask = (out_seq != tokenizer.pad_token_id).long()
+
+                # Mask out prompt tokens so loss is computed ONLY on completion tokens
+                labels = out_seq.clone()
+                labels[:, :prompt_len] = -100
+                labels[out_seq == tokenizer.pad_token_id] = -100
+
+                out = model(input_ids=out_seq, attention_mask=attn_mask, labels=labels)
+                # Policy gradient weighted loss: out.loss is mean NLL of completion tokens
+                loss = (out.loss * float(adv)) / group_size
                 loss.backward()
                 loss_val += float(out.loss.item())
 
